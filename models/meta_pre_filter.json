@@ -1,0 +1,289 @@
+{
+  "n_jobs": 1699,
+  "n_features_raw": 696,
+  "n_features": 50,
+  "best_k": 13,
+  "space": {
+    "scaler": "standard",
+    "pca_components": 50,
+    "l2": true,
+    "n_features_out": 50,
+    "identity": false,
+    "steps": [
+      "scaler",
+      "pca",
+      "l2"
+    ],
+    "pca_n_components": 50,
+    "pca_explained_variance": 0.28735370615252503
+  },
+  "k_search": [
+    {
+      "k": 8,
+      "inertia": 960.487484611977,
+      "silhouette": 0.20902299262569882,
+      "davies_bouldin": 2.1960404093634445
+    },
+    {
+      "k": 9,
+      "inertia": 925.7274194156413,
+      "silhouette": 0.2163682046355238,
+      "davies_bouldin": 2.125282599469798
+    },
+    {
+      "k": 10,
+      "inertia": 890.5860777978049,
+      "silhouette": 0.21786157711547216,
+      "davies_bouldin": 2.189461677976735
+    },
+    {
+      "k": 11,
+      "inertia": 859.6306809873561,
+      "silhouette": 0.22705481310840117,
+      "davies_bouldin": 2.0881056561632523
+    },
+    {
+      "k": 12,
+      "inertia": 834.572144803046,
+      "silhouette": 0.23629891016567137,
+      "davies_bouldin": 1.9920739534287257
+    },
+    {
+      "k": 13,
+      "inertia": 811.160248746107,
+      "silhouette": 0.23776152505377204,
+      "davies_bouldin": 2.0798911656880312
+    },
+    {
+      "k": 14,
+      "inertia": 788.1954712283141,
+      "silhouette": 0.2080117585677085,
+      "davies_bouldin": 2.0491736953652953
+    }
+  ],
+  "cluster_profiles": {
+    "0": {
+      "cluster_id": 0,
+      "name": "DevOps: ci_cd, kubernetes, monitoring",
+      "role_family": "DevOps",
+      "size": 96,
+      "top_skills": [
+        "ci_cd",
+        "kubernetes",
+        "monitoring",
+        "terraform"
+      ],
+      "example_title": "DevOps Engineer",
+      "median_salary_vnd": null,
+      "mean_years": 3.7447916666666665,
+      "level_mode": "junior"
+    },
+    "1": {
+      "cluster_id": 1,
+      "name": "Other: photoshop, figma, uiux",
+      "role_family": "Other",
+      "size": 369,
+      "top_skills": [
+        "photoshop",
+        "figma",
+        "uiux",
+        "premiere"
+      ],
+      "example_title": "Nhân Viên Thiết Kế",
+      "median_salary_vnd": null,
+      "mean_years": 2.25,
+      "level_mode": "junior"
+    },
+    "2": {
+      "cluster_id": 2,
+      "name": "Backend: javascript, react, css",
+      "role_family": "Backend",
+      "size": 133,
+      "top_skills": [
+        "javascript",
+        "react",
+        "css",
+        "html"
+      ],
+      "example_title": "Fullstack Developer",
+      "median_salary_vnd": null,
+      "mean_years": 18.35902255639098,
+      "level_mode": "junior"
+    },
+    "3": {
+      "cluster_id": 3,
+      "name": "Other: segment_anything, networking, haravan",
+      "role_family": "Other",
+      "size": 172,
+      "top_skills": [
+        "segment_anything",
+        "networking",
+        "haravan",
+        "excel"
+      ],
+      "example_title": "Nhân Viên Kinh Doanh",
+      "median_salary_vnd": null,
+      "mean_years": 2.252906976744186,
+      "level_mode": "junior"
+    },
+    "4": {
+      "cluster_id": 4,
+      "name": "QA: automation_test, test_plan, selenium",
+      "role_family": "QA",
+      "size": 105,
+      "top_skills": [
+        "automation_test",
+        "test_plan",
+        "selenium",
+        "sql"
+      ],
+      "example_title": "Manual Tester",
+      "median_salary_vnd": null,
+      "mean_years": 4.914285714285715,
+      "level_mode": "junior"
+    },
+    "5": {
+      "cluster_id": 5,
+      "name": "AI/ML: python, machine_learning, aws",
+      "role_family": "AI/ML",
+      "size": 132,
+      "top_skills": [
+        "python",
+        "machine_learning",
+        "aws",
+        "sql"
+      ],
+      "example_title": "Data Engineer",
+      "median_salary_vnd": null,
+      "mean_years": 3.25,
+      "level_mode": "junior"
+    },
+    "6": {
+      "cluster_id": 6,
+      "name": "Security: siem, iso27001, network_security",
+      "role_family": "Security",
+      "size": 72,
+      "top_skills": [
+        "siem",
+        "iso27001",
+        "network_security",
+        "soc2"
+      ],
+      "example_title": "Information Security",
+      "median_salary_vnd": null,
+      "mean_years": 15.84375,
+      "level_mode": "junior"
+    },
+    "7": {
+      "cluster_id": 7,
+      "name": "Backend: microservices, java, kubernetes",
+      "role_family": "Backend",
+      "size": 137,
+      "top_skills": [
+        "microservices",
+        "java",
+        "kubernetes",
+        "docker"
+      ],
+      "example_title": "(, ) FullStack Developer",
+      "median_salary_vnd": null,
+      "mean_years": 8.755474452554745,
+      "level_mode": "junior"
+    },
+    "8": {
+      "cluster_id": 8,
+      "name": "AI/ML: openai, claude, llm",
+      "role_family": "AI/ML",
+      "size": 88,
+      "top_skills": [
+        "openai",
+        "claude",
+        "llm",
+        "langchain_agents"
+      ],
+      "example_title": "Product Owner",
+      "median_salary_vnd": null,
+      "mean_years": 2.9431818181818183,
+      "level_mode": "junior"
+    },
+    "9": {
+      "cluster_id": 9,
+      "name": "Other: networking, linux, backup",
+      "role_family": "Other",
+      "size": 92,
+      "top_skills": [
+        "networking",
+        "linux",
+        "backup",
+        "network_security"
+      ],
+      "example_title": "System Administrator",
+      "median_salary_vnd": null,
+      "mean_years": 2.442934782608696,
+      "level_mode": "junior"
+    },
+    "10": {
+      "cluster_id": 10,
+      "name": "Mobile: android, ios, design_patterns",
+      "role_family": "Mobile",
+      "size": 89,
+      "top_skills": [
+        "android",
+        "ios",
+        "design_patterns",
+        "cpp"
+      ],
+      "example_title": "Android Developer",
+      "median_salary_vnd": null,
+      "mean_years": 3.533707865168539,
+      "level_mode": "junior"
+    },
+    "11": {
+      "cluster_id": 11,
+      "name": "Other: delta, excel",
+      "role_family": "Other",
+      "size": 79,
+      "top_skills": [
+        "delta",
+        "excel"
+      ],
+      "example_title": "Kỹ Sư Lập Trình CNC",
+      "median_salary_vnd": null,
+      "mean_years": 2.740506329113924,
+      "level_mode": "junior"
+    },
+    "12": {
+      "cluster_id": 12,
+      "name": "Other: sql, powerbi, data_analysis",
+      "role_family": "Other",
+      "size": 135,
+      "top_skills": [
+        "sql",
+        "powerbi",
+        "data_analysis",
+        "odoo"
+      ],
+      "example_title": "Data Analyst",
+      "median_salary_vnd": null,
+      "mean_years": 3.814814814814815,
+      "level_mode": "junior"
+    }
+  },
+  "sources": {
+    "topcv": 1100,
+    "itviec": 599
+  },
+  "role_family_counts": {
+    "Other": 736,
+    "Backend": 257,
+    "AI/ML": 157,
+    "QA": 123,
+    "PM/BA": 122,
+    "DevOps": 59,
+    "Data": 59,
+    "Security": 57,
+    "Fullstack": 56,
+    "Mobile": 51,
+    "Frontend": 22
+  }
+}

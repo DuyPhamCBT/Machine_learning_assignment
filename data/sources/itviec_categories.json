@@ -1,0 +1,13 @@
+{
+  "itviec_backend": "https://itviec.com/it-jobs/backend",
+  "itviec_frontend": "https://itviec.com/it-jobs/frontend",
+  "itviec_fullstack": "https://itviec.com/it-jobs/full-stack",
+  "itviec_mobile": "https://itviec.com/it-jobs/mobile",
+  "itviec_tester": "https://itviec.com/it-jobs/tester",
+  "itviec_devops": "https://itviec.com/it-jobs/devops",
+  "itviec_python": "https://itviec.com/it-jobs/python",
+  "itviec_java": "https://itviec.com/it-jobs/java",
+  "itviec_javascript": "https://itviec.com/it-jobs/javascript",
+  "itviec_reactjs": "https://itviec.com/it-jobs/reactjs",
+  "itviec_data": "https://itviec.com/it-jobs/data-engineer"
+}

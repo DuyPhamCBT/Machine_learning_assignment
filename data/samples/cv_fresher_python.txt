@@ -1,0 +1,15 @@
+Nguyen Van An
+Fresher Backend Developer
+Email: an.nguyen@example.com
+Kinh nghiệm: 6 tháng thực tập
+
+Kỹ năng:
+- Python, Django, REST API, SQL, PostgreSQL, Git, HTML, CSS, Linux cơ bản
+- Đã làm đồ án e-commerce nhỏ với Django + PostgreSQL
+
+Kinh nghiệm làm việc:
+Thực tập sinh Backend tại Mekong Labs (6 tháng)
+- Viết API CRUD, sửa bug, viết unit test pytest.
+
+Học vấn:
+Đại học CNTT, GPA 3.2/4

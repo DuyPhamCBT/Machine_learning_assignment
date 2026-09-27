@@ -1,0 +1,15 @@
+VI_EN_STOPWORDS = {
+    "và", "hoặc", "của", "cho", "với", "các", "những", "một", "công", "việc",
+    "làm", "người", "bạn", "chúng", "tôi", "được", "sẽ", "trong", "khi", "nếu",
+    "như", "là", "có", "không", "rất", "để", "từ", "này", "đó", "cần", "yêu",
+    "cầu", "kinh", "nghiệm", "năm", "tham", "gia", "phát", "triển", "sản",
+    "phẩm",     "cong", "ty", "môi", "truong", "quyen", "loi", "luong", "thuong",
+    "bao", "hiem", "du", "lich", "team", "building", "the", "and", "or", "of",
+    "to", "for", "with", "a", "an", "in", "on", "at", "by", "from", "as",
+    "is", "are", "be", "this", "that", "we", "you", "our", "your", "will",
+    "job", "work", "working", "experience", "years", "year", "requirements",
+    "responsibility", "responsibilities", "benefit", "benefits", "company",
+    "team", "good", "strong", "ability", "skills", "skill", "knowledge",
+    "have", "has", "must", "plus", "nice", "including", "using", "used",
+    "etc", "other", "others", "about", "into", "over", "than", "then",
+}

@@ -1,0 +1,54 @@
+{
+  "n_jobs": 1019,
+  "n_features": 689,
+  "skill_dim": 647,
+  "text_dim": 40,
+  "struct_dim": 2,
+  "role_family_counts": {
+    "Other": 215,
+    "Backend": 210,
+    "AI/ML": 152,
+    "QA": 107,
+    "DevOps": 59,
+    "Data": 58,
+    "Fullstack": 56,
+    "Security": 52,
+    "PM/BA": 45,
+    "Mobile": 43,
+    "Frontend": 22
+  },
+  "corpus_filter": {
+    "n_before": 1699,
+    "n_after": 1019,
+    "n_dropped": 680,
+    "min_it_skills": 3,
+    "min_it_skills_if_it_family": 2,
+    "drop_reasons": {
+      "non_it_title": 267,
+      "too_few_it_skills": 413
+    },
+    "dropped_role_family": {
+      "Other": 521,
+      "PM/BA": 77,
+      "Backend": 47,
+      "QA": 16,
+      "Mobile": 8,
+      "Security": 5,
+      "AI/ML": 5,
+      "Data": 1
+    },
+    "kept_role_family": {
+      "Other": 215,
+      "Backend": 210,
+      "AI/ML": 152,
+      "QA": 107,
+      "DevOps": 59,
+      "Data": 58,
+      "Fullstack": 56,
+      "Security": 52,
+      "PM/BA": 45,
+      "Mobile": 43,
+      "Frontend": 22
+    }
+  }
+}

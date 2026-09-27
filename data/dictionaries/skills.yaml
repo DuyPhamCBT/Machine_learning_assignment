@@ -1,0 +1,3789 @@
+# Canonical IT skill taxonomy (ITviec / TopCV).
+# Family chỉ dùng nhóm chung: language, frontend, backend, mobile,
+# data, ai_ml, devops, cloud, qa, security.
+# Alias ngắn/mơ hồ (ui, cv, rest, json, quay, ml, ...) bị chặn trong src/features/skills.py.
+
+skills:
+  # --- Languages ---
+  python:
+    family: language
+    aliases: [python, python3, python2]
+  javascript:
+    family: language
+    aliases: [javascript, js, es6, es2015]
+  typescript:
+    family: language
+    aliases: [typescript, ts]
+  java:
+    family: language
+    aliases: [java, jdk, jre]
+  csharp:
+    family: language
+    aliases: [c#, csharp, "c sharp", "c-sharp"]
+  cpp:
+    family: language
+    aliases: [c++, cpp, "c plus plus"]
+  golang:
+    family: language
+    aliases: [golang, "go lang"]
+  php:
+    family: language
+    aliases: [php, php7, php8]
+  ruby:
+    family: language
+    aliases: [ruby, ruby on rails]
+  kotlin:
+    family: language
+    aliases: [kotlin]
+  swift:
+    family: language
+    aliases: [swift, swiftui]
+  scala:
+    family: language
+    aliases: [scala]
+  rust:
+    family: language
+    aliases: [rust]
+  sql:
+    family: language
+    aliases: [sql, t-sql, tsql, plpgsql]
+  html:
+    family: language
+    aliases: [html, html5]
+  css:
+    family: language
+    aliases: [css, css3, scss, sass, less]
+  bash:
+    family: language
+    aliases: [bash, shell script, shell scripting]
+  powershell:
+    family: language
+    aliases: [powershell]
+  dart:
+    family: language
+    aliases: [dart]
+  objective_c:
+    family: language
+    aliases: [objective-c, objectivec, "obj-c"]
+  vbnet:
+    family: language
+    aliases: [vb.net, vbnet, "visual basic"]
+
+  # --- Frontend ---
+  react:
+    family: frontend
+    aliases: [react, reactjs, react.js]
+  nextjs:
+    family: frontend
+    aliases: [nextjs, next.js, next js]
+  vue:
+    family: frontend
+    aliases: [vue, vuejs, vue.js, vue3]
+  nuxt:
+    family: frontend
+    aliases: [nuxt, nuxtjs, nuxt.js]
+  angular:
+    family: frontend
+    aliases: [angular, angularjs, angular.js]
+  svelte:
+    family: frontend
+    aliases: [svelte, sveltekit]
+  redux:
+    family: frontend
+    aliases: [redux, redux-toolkit, redux toolkit]
+  zustand:
+    family: frontend
+    aliases: [zustand]
+  webpack:
+    family: frontend
+    aliases: [webpack]
+  vite:
+    family: frontend
+    aliases: [vite]
+  tailwind:
+    family: frontend
+    aliases: [tailwind, tailwindcss, tailwind css]
+  bootstrap:
+    family: frontend
+    aliases: [bootstrap, bootstrap5]
+  jquery:
+    family: frontend
+    aliases: [jquery]
+  material_ui:
+    family: frontend
+    aliases: [material ui, material-ui, mui]
+  antd:
+    family: frontend
+    aliases: [ant design, antd]
+  storybook:
+    family: frontend
+    aliases: [storybook]
+  graphql_frontend:
+    family: frontend
+    aliases: [apollo client, relay]
+  rxjs:
+    family: frontend
+    aliases: [rxjs]
+  threejs:
+    family: frontend
+    aliases: [three.js, threejs]
+  d3:
+    family: frontend
+    aliases: [d3, d3.js]
+
+  # --- Backend ---
+  nodejs:
+    family: backend
+    aliases: [nodejs, node.js, node js]
+  express:
+    family: backend
+    aliases: [express, expressjs, express.js]
+  nestjs:
+    family: backend
+    aliases: [nestjs, nest.js]
+  django:
+    family: backend
+    aliases: [django]
+  flask:
+    family: backend
+    aliases: [flask]
+  fastapi:
+    family: backend
+    aliases: [fastapi, fast api]
+  spring:
+    family: backend
+    aliases: [spring, spring boot, springboot, spring framework]
+  hibernate:
+    family: backend
+    aliases: [hibernate, jpa]
+  laravel:
+    family: backend
+    aliases: [laravel]
+  symfony:
+    family: backend
+    aliases: [symfony]
+  dotnet:
+    family: backend
+    aliases: [.net, dotnet, asp.net, aspnet, ".net core", "asp.net core"]
+  rails:
+    family: backend
+    aliases: [rails, ruby on rails, ror]
+  gin:
+    family: backend
+    aliases: [gin gonic, gin framework]
+  fastapi_related:
+    family: backend
+    aliases: [uvicorn, gunicorn, celery]
+  graphql:
+    family: backend
+    aliases: [graphql]
+  rest_api:
+    family: backend
+    aliases: [rest api, restful, restful api, restful api]
+  grpc:
+    family: backend
+    aliases: [grpc, g rpc]
+  websocket:
+    family: backend
+    aliases: [websocket, socket.io, socketio]
+  microservices:
+    family: backend
+    aliases: [microservice, microservices, micro-services]
+  rabbitmq:
+    family: backend
+    aliases: [rabbitmq, rabbit mq]
+  kafka:
+    family: backend
+    aliases: [kafka, apache kafka]
+  redis:
+    family: backend
+    aliases: [redis]
+  elasticsearch:
+    family: backend
+    aliases: [elasticsearch, elastic search, elk]
+  nginx:
+    family: backend
+    aliases: [nginx]
+  apache:
+    family: backend
+    aliases: [apache http, apache]
+  oauth:
+    family: backend
+    aliases: [oauth, oauth2, jwt, openid]
+  swagger:
+    family: backend
+    aliases: [swagger, openapi]
+
+  # --- Data / DB ---
+  postgresql:
+    family: data
+    aliases: [postgresql, postgres, postgre]
+  mysql:
+    family: data
+    aliases: [mysql, mariadb]
+  mongodb:
+    family: data
+    aliases: [mongodb, mongo]
+  sqlserver:
+    family: data
+    aliases: [sql server, mssql, microsoft sql]
+  oracle:
+    family: data
+    aliases: [oracle, oracle db]
+  sqlite:
+    family: data
+    aliases: [sqlite]
+  dynamodb:
+    family: data
+    aliases: [dynamodb, dynamo db]
+  cassandra:
+    family: data
+    aliases: [cassandra]
+  snowflake:
+    family: data
+    aliases: [snowflake]
+  bigquery:
+    family: data
+    aliases: [bigquery, big query]
+  redshift:
+    family: data
+    aliases: [redshift]
+  spark:
+    family: data
+    aliases: [spark, pyspark, apache spark]
+  hadoop:
+    family: data
+    aliases: [hadoop, hdfs]
+  airflow:
+    family: data
+    aliases: [airflow, apache airflow]
+  dbt:
+    family: data
+    aliases: [dbt, data build tool]
+  hive:
+    family: data
+    aliases: [hive, apache hive]
+  flink:
+    family: data
+    aliases: [flink, apache flink]
+  tableau:
+    family: data
+    aliases: [tableau]
+  powerbi:
+    family: data
+    aliases: [power bi, powerbi]
+  looker:
+    family: data
+    aliases: [looker]
+  excel:
+    family: data
+    aliases: [excel, microsoft excel]
+  pandas:
+    family: data
+    aliases: [pandas]
+  numpy:
+    family: data
+    aliases: [numpy]
+  etl:
+    family: data
+    aliases: [etl, elt, data pipeline]
+  data_warehouse:
+    family: data
+    aliases: [data warehouse, dwh, data warehousing]
+  clickhouse:
+    family: data
+    aliases: [clickhouse]
+
+  # --- AI / ML ---
+  machine_learning:
+    family: ai_ml
+    aliases: [machine learning]
+  deep_learning:
+    family: ai_ml
+    aliases: [deep learning]
+  nlp:
+    family: ai_ml
+    aliases: [nlp, natural language processing, xu ly ngon ngu tu nhien]
+  computer_vision:
+    family: ai_ml
+    aliases: [computer vision, thi giac may tinh]
+  tensorflow:
+    family: ai_ml
+    aliases: [tensorflow]
+  pytorch:
+    family: ai_ml
+    aliases: [pytorch, torch]
+  scikit_learn:
+    family: ai_ml
+    aliases: [scikit-learn, sklearn, scikit learn]
+  keras:
+    family: ai_ml
+    aliases: [keras]
+  huggingface:
+    family: ai_ml
+    aliases: [huggingface, hugging face, transformers]
+  langchain:
+    family: ai_ml
+    aliases: [langchain, lang chain]
+  langgraph:
+    family: ai_ml
+    aliases: [langgraph]
+  llama_index:
+    family: ai_ml
+    aliases: [llamaindex, llama index]
+  openai:
+    family: ai_ml
+    aliases: [openai, gpt, chatgpt, gpt-4, gpt4]
+  llm:
+    family: ai_ml
+    aliases: [llm, large language model, generative ai, genai]
+  rag:
+    family: ai_ml
+    aliases: [rag, retrieval augmented generation]
+  vector_db:
+    family: ai_ml
+    aliases: [faiss, pinecone, chromadb, chroma, weaviate, qdrant, milvus]
+  opencv:
+    family: ai_ml
+    aliases: [opencv, open cv]
+  mlflow:
+    family: ai_ml
+    aliases: [mlflow]
+  xgboost:
+    family: ai_ml
+    aliases: [xgboost, lightgbm, catboost]
+  prompt_engineering:
+    family: ai_ml
+    aliases: [prompt engineering, prompt-engineering]
+  mlops:
+    family: ai_ml
+    aliases: [mlops, ml ops]
+
+  # --- DevOps / Cloud ---
+  docker:
+    family: devops
+    aliases: [docker, dockerfile, docker-compose]
+  kubernetes:
+    family: devops
+    aliases: [kubernetes, k8s]
+  ci_cd:
+    family: devops
+    aliases: [ci/cd, cicd, continuous integration, jenkins, gitlab ci, github actions]
+  terraform:
+    family: devops
+    aliases: [terraform]
+  ansible:
+    family: devops
+    aliases: [ansible]
+  aws:
+    family: cloud
+    aliases: [aws, amazon web services, ec2, s3, lambda, eks]
+  azure:
+    family: cloud
+    aliases: [azure, microsoft azure]
+  gcp:
+    family: cloud
+    aliases: [gcp, google cloud, google cloud platform]
+  linux:
+    family: devops
+    aliases: [linux, ubuntu, centos]
+  prometheus:
+    family: devops
+    aliases: [prometheus]
+  grafana:
+    family: devops
+    aliases: [grafana]
+  helm:
+    family: devops
+    aliases: [helm]
+  argocd:
+    family: devops
+    aliases: [argocd, argo cd]
+  git:
+    family: devops
+    aliases: [git, github, gitlab, bitbucket]
+  nginx_devops:
+    family: devops
+    aliases: [load balancer]
+  monitoring:
+    family: devops
+    aliases: [datadog, new relic, elk stack, splunk]
+  serverless:
+    family: cloud
+    aliases: [serverless, lambda, azure functions, cloud functions]
+
+  # --- Mobile ---
+  flutter:
+    family: mobile
+    aliases: [flutter]
+  react_native:
+    family: mobile
+    aliases: [react native, react-native]
+  android:
+    family: mobile
+    aliases: [android, android sdk]
+  ios:
+    family: mobile
+    aliases: [ios, iphone, uikit]
+  firebase:
+    family: mobile
+    aliases: [firebase]
+  jetpack:
+    family: mobile
+    aliases: [jetpack compose, jetpack]
+  xamarin:
+    family: mobile
+    aliases: [xamarin]
+  ionic:
+    family: mobile
+    aliases: [ionic]
+
+  # --- QA ---
+  selenium:
+    family: qa
+    aliases: [selenium]
+  cypress:
+    family: qa
+    aliases: [cypress]
+  playwright:
+    family: qa
+    aliases: [playwright]
+  jmeter:
+    family: qa
+    aliases: [jmeter, apache jmeter]
+  postman:
+    family: qa
+    aliases: [postman]
+  appium:
+    family: qa
+    aliases: [appium]
+  pytest:
+    family: qa
+    aliases: [pytest, unittest]
+  junit:
+    family: qa
+    aliases: [junit, testng]
+  automation_test:
+    family: qa
+    aliases: [automation test, test automation, automated testing]
+  manual_test:
+    family: qa
+    aliases: [manual test, manual testing]
+  api_test:
+    family: qa
+    aliases: [api testing, api test]
+  performance_test:
+    family: qa
+    aliases: [performance testing, load testing, stress testing]
+
+  # --- Security ---
+  pentest:
+    family: security
+    aliases: [pentest, penetration testing, ethical hacking]
+  owasp:
+    family: security
+    aliases: [owasp, owasp top 10]
+  siem:
+    family: security
+    aliases: [siem, soc]
+  network_security:
+    family: security
+    aliases: [network security, firewall]
+  cryptography:
+    family: security
+    aliases: [cryptography, encryption]
+
+  # --- Soft / process ---
+  agile:
+    family: soft
+    aliases: [agile, scrum, kanban]
+  jira:
+    family: soft
+    aliases: [jira]
+  communication:
+    family: soft
+    aliases: [tieng anh, english, communication]
+  problem_solving:
+    family: soft
+    aliases: [problem solving, giai quyet van de]
+  teamwork:
+    family: soft
+    aliases: [teamwork, lam viec nhom]
+
+  # --- Extra popular VN stacks ---
+  figma:
+    family: frontend
+    aliases: [figma]
+  wordpress:
+    family: backend
+    aliases: [wordpress]
+  magento:
+    family: backend
+    aliases: [magento]
+  shopify:
+    family: backend
+    aliases: [shopify]
+  unity:
+    family: language
+    aliases: [unity, unity3d]
+  unreal:
+    family: language
+    aliases: [unreal, unreal engine]
+  salesforce:
+    family: backend
+    aliases: [salesforce]
+  sap:
+    family: data
+    aliases: [sap]
+  tableau_prep:
+    family: data
+    aliases: [alteryx, ssas, ssrs, ssis]
+  kafka_connect:
+    family: data
+    aliases: [kafka connect, debezium]
+  minio:
+    family: data
+    aliases: [minio]
+  redis_cache:
+    family: backend
+    aliases: [caching, cache]
+  rabbit_kafka:
+    family: backend
+    aliases: [message queue, message broker, pubsub, pub/sub]
+  prisma:
+    family: backend
+    aliases: [prisma]
+  typeorm:
+    family: backend
+    aliases: [typeorm]
+  sequelize:
+    family: backend
+    aliases: [sequelize]
+  mongoose:
+    family: backend
+    aliases: [mongoose]
+  sqlalchemy:
+    family: backend
+    aliases: [sqlalchemy]
+  jwt_auth:
+    family: backend
+    aliases: [json web token]
+  sso:
+    family: backend
+    aliases: [sso, single sign-on, keycloak]
+  rabbitmq_extra:
+    family: backend
+    aliases: [activemq, zeromq]
+  linux_admin:
+    family: devops
+    aliases: [system admin, sysadmin, system administrator]
+  networking:
+    family: devops
+    aliases: [tcp/ip, dns, http, https]
+  iac:
+    family: devops
+    aliases: [infrastructure as code, iac, pulumi, cloudformation]
+  sonarqube:
+    family: devops
+    aliases: [sonarqube, sonar]
+  nexus:
+    family: devops
+    aliases: [nexus, artifactory]
+  maven:
+    family: backend
+    aliases: [maven, gradle]
+  npm:
+    family: frontend
+    aliases: [npm, yarn, pnpm]
+  pwa:
+    family: frontend
+    aliases: [pwa, progressive web app]
+  ssr:
+    family: frontend
+    aliases: [ssr, server side rendering]
+  microfrontend:
+    family: frontend
+    aliases: [micro frontend, micro-frontend, module federation]
+  websocket_fe:
+    family: frontend
+    aliases: [signalr]
+  blender:
+    family: frontend
+    aliases: [blender]
+  tensorflow_lite:
+    family: ai_ml
+    aliases: [tflite, tensorflow lite]
+  onnx:
+    family: ai_ml
+    aliases: [onnx]
+  cuda:
+    family: ai_ml
+    aliases: [cuda, gpu]
+  data_analysis:
+    family: data
+    aliases: [data analysis, data analytics, phan tich du lieu]
+  statistics:
+    family: data
+    aliases: [statistics, thong ke, a/b testing, ab testing]
+  python_scripting:
+    family: language
+    aliases: [scripting]
+  csharp_unity:
+    family: language
+    aliases: [c# unity]
+  blockchain:
+    family: backend
+    aliases: [blockchain, solidity, web3, ethereum, smart contract]
+  redis_queue:
+    family: backend
+    aliases: [sidekiq, bullmq, rq]
+  clean_architecture:
+    family: backend
+    aliases: [clean architecture, ddd, domain driven design]
+  tdd:
+    family: qa
+    aliases: [tdd, bdd, test driven]
+  cucumber:
+    family: qa
+    aliases: [cucumber, gherkin]
+  burp:
+    family: security
+    aliases: [burp suite, burpsuite]
+  wireshark:
+    family: security
+    aliases: [wireshark]
+  iso27001:
+    family: security
+    aliases: [iso 27001, iso27001]
+  gdpr:
+    family: security
+    aliases: [gdpr]
+  product_management:
+    family: soft
+    aliases: [product owner, product manager]
+  business_analysis:
+    family: soft
+    aliases: [business analyst, business analysis]
+  uiux:
+    family: frontend
+    aliases: [ui/ux, uiux, user experience, user interface]
+  canva:
+    family: frontend
+    aliases: [canva]
+  notion:
+    family: soft
+    aliases: [notion, confluence]
+  slack:
+    family: soft
+    aliases: [slack, teams]
+  linux_cli:
+    family: devops
+    aliases: [command line, cli, terminal]
+  vim:
+    family: devops
+    aliases: [vim, neovim]
+  redis_pubsub:
+    family: backend
+    aliases: [redis pubsub]
+  graphql_hasura:
+    family: backend
+    aliases: [hasura]
+  supabase:
+    family: backend
+    aliases: [supabase]
+  strapi:
+    family: backend
+    aliases: [strapi]
+  nest_typeorm:
+    family: backend
+    aliases: []
+  python_asyncio:
+    family: backend
+    aliases: [asyncio, aiohttp]
+  tornado:
+    family: backend
+    aliases: [tornado]
+  quarkus:
+    family: backend
+    aliases: [quarkus]
+  micronaut:
+    family: backend
+    aliases: [micronaut]
+  vertx:
+    family: backend
+    aliases: [vertx, vert.x]
+  kafka_streams:
+    family: data
+    aliases: [kafka streams, ksql]
+  nifi:
+    family: data
+    aliases: [nifi, apache nifi]
+  pentaho:
+    family: data
+    aliases: [pentaho]
+  informatica:
+    family: data
+    aliases: [informatica]
+  sas:
+    family: data
+    aliases: [sas]
+  spss:
+    family: data
+    aliases: [spss]
+  matplotlib:
+    family: data
+    aliases: [matplotlib, seaborn, plotly]
+  jupyter:
+    family: data
+    aliases: [jupyter, notebook]
+  streamlit:
+    family: ai_ml
+    aliases: [streamlit, gradio]
+  yolov8:
+    family: ai_ml
+    aliases: [yolo, yolov5, yolov8]
+  bert:
+    family: ai_ml
+    aliases: [bert, roberta, phobert]
+  whisper:
+    family: ai_ml
+    aliases: [whisper, speech to text]
+  stable_diffusion:
+    family: ai_ml
+    aliases: [stable diffusion, midjourney]
+  vector_search:
+    family: ai_ml
+    aliases: [vector search, embedding]
+  langsmith:
+    family: ai_ml
+    aliases: [langsmith]
+  ollama:
+    family: ai_ml
+    aliases: [ollama, vllm]
+  azure_openai:
+    family: ai_ml
+    aliases: [azure openai]
+  vertex_ai:
+    family: ai_ml
+    aliases: [vertex ai, sagemaker]
+  kubeflow:
+    family: ai_ml
+    aliases: [kubeflow]
+  dvc:
+    family: ai_ml
+    aliases: [dvc]
+  great_expectations:
+    family: data
+    aliases: [great expectations, data quality]
+  trino:
+    family: data
+    aliases: [trino, prestodb, presto]
+  iceberg:
+    family: data
+    aliases: [iceberg, delta lake, hudi]
+  kafka_schema:
+    family: data
+    aliases: [schema registry, avro, protobuf]
+  redis_search:
+    family: data
+    aliases: [redisearch]
+  neo4j:
+    family: data
+    aliases: [neo4j, graph database]
+  influxdb:
+    family: data
+    aliases: [influxdb, timescaledb]
+  grafana_loki:
+    family: devops
+    aliases: [loki]
+  istio:
+    family: devops
+    aliases: [istio, service mesh]
+  consul:
+    family: devops
+    aliases: [consul]
+  vault:
+    family: devops
+    aliases: [vault, hashicorp vault]
+  packer:
+    family: devops
+    aliases: [packer]
+  vagrant:
+    family: devops
+    aliases: [vagrant]
+  vsphere:
+    family: devops
+    aliases: [vmware, vsphere]
+  openshift:
+    family: cloud
+    aliases: [openshift]
+  cloudflare:
+    family: cloud
+    aliases: [cloudflare]
+  vercel:
+    family: cloud
+    aliases: [vercel, netlify]
+  heroku:
+    family: cloud
+    aliases: [heroku]
+  digitalocean:
+    family: cloud
+    aliases: [digitalocean, digital ocean]
+  alicloud:
+    family: cloud
+    aliases: [alicloud, alibaba cloud]
+  swiftui:
+    family: mobile
+    aliases: [combine]
+  kotlin_multiplatform:
+    family: mobile
+    aliases: [kmm, kotlin multiplatform]
+  gradle_android:
+    family: mobile
+    aliases: [android studio]
+  xcode:
+    family: mobile
+    aliases: [xcode, cocoapods, spm]
+  fastlane:
+    family: mobile
+    aliases: [fastlane]
+  rest_assured:
+    family: qa
+    aliases: [rest-assured, rest assured]
+  karate:
+    family: qa
+    aliases: [karate]
+  k6:
+    family: qa
+    aliases: [k6, locust, gatling]
+  testcomplete:
+    family: qa
+    aliases: [testcomplete]
+  qtest:
+    family: qa
+    aliases: [testrail, zephyr, qtest]
+  zap:
+    family: security
+    aliases: [owasp zap, nessus]
+  nmap:
+    family: security
+    aliases: [nmap]
+  metasploit:
+    family: security
+    aliases: [metasploit]
+  iam:
+    family: security
+    aliases: [iam, identity access]
+  zero_trust:
+    family: security
+    aliases: [zero trust]
+  kafka_security:
+    family: security
+    aliases: [mtls, tls]
+  figma_design:
+    family: frontend
+    aliases: [adobe xd, sketch]
+  webpack_module:
+    family: frontend
+    aliases: [rollup, esbuild, parcel]
+  testing_library:
+    family: frontend
+    aliases: [jest, vitest, testing-library]
+  cypress_fe:
+    family: frontend
+    aliases: [enzyme]
+  css_in_js:
+    family: frontend
+    aliases: [styled-components, emotion, styled components]
+  graphql_apollo:
+    family: frontend
+    aliases: [apollo]
+  electron:
+    family: frontend
+    aliases: [electron]
+  tauri:
+    family: frontend
+    aliases: [tauri]
+  remix:
+    family: frontend
+    aliases: [remix]
+  astro:
+    family: frontend
+    aliases: [astro]
+  qwik:
+    family: frontend
+    aliases: [qwik]
+  solidjs:
+    family: frontend
+    aliases: [solidjs, solid.js]
+  pinia:
+    family: frontend
+    aliases: [pinia, vuex]
+  ngrx:
+    family: frontend
+    aliases: [ngrx]
+  capacitor:
+    family: mobile
+    aliases: [capacitor, cordova]
+  realm:
+    family: mobile
+    aliases: [realm]
+  graphql_mobile:
+    family: mobile
+    aliases: [apollo android]
+  python_web:
+    family: backend
+    aliases: [pyramid, bottle]
+  php_cms:
+    family: backend
+    aliases: [drupal, joomla]
+  java_ee:
+    family: backend
+    aliases: [jakarta ee, java ee, j2ee]
+  kafka_java:
+    family: backend
+    aliases: [spring kafka]
+  camel:
+    family: backend
+    aliases: [apache camel]
+  quark:
+    family: backend
+    aliases: []
+  cobol:
+    family: language
+    aliases: [cobol]
+  perl:
+    family: language
+    aliases: [perl]
+  lua:
+    family: language
+    aliases: [lua]
+  r_lang:
+    family: language
+    aliases: [rstudio]
+  matlab:
+    family: language
+    aliases: [matlab]
+  haskell:
+    family: language
+    aliases: [haskell]
+  elixir:
+    family: language
+    aliases: [elixir, phoenix]
+  erlang:
+    family: language
+    aliases: [erlang]
+  clojure:
+    family: language
+    aliases: [clojure]
+  groovy:
+    family: language
+    aliases: [groovy]
+  assembly:
+    family: language
+    aliases: [assembly]
+  vhdl:
+    family: language
+    aliases: [vhdl, verilog]
+  embedded_c:
+    family: language
+    aliases: [embedded, embedded c, firmware, rtost, stm32]
+  mqtt:
+    family: backend
+    aliases: [mqtt, iot]
+  ros:
+    family: language
+    aliases: [ros, robotics]
+  opengl:
+    family: frontend
+    aliases: [opengl, vulkan, directx]
+  webgl:
+    family: frontend
+    aliases: [webgl]
+  webrtc:
+    family: frontend
+    aliases: [webrtc]
+  payment:
+    family: backend
+    aliases: [vnpay, momo, zalopay, stripe, paypal]
+  elasticsearch_search:
+    family: data
+    aliases: [solr, opensearch, meilisearch, typesense]
+  redis_lock:
+    family: backend
+    aliases: [distributed lock]
+  saga:
+    family: backend
+    aliases: [saga, outbox, cqrs, event sourcing]
+  hexagonal:
+    family: backend
+    aliases: [hexagonal, ports and adapters]
+  code_review:
+    family: soft
+    aliases: [code review]
+  mentoring:
+    family: soft
+    aliases: [mentoring, coaching]
+  documentation:
+    family: soft
+    aliases: [documentation, technical writing]
+  stakeholder:
+    family: soft
+    aliases: [stakeholder]
+  sql_tuning:
+    family: data
+    aliases: [query optimization, indexing, sql tuning]
+  data_modeling:
+    family: data
+    aliases: [data modeling, star schema, dimensional modeling]
+  cdc:
+    family: data
+    aliases: [cdc, change data capture]
+  lakehouse:
+    family: data
+    aliases: [lakehouse, data lake]
+  feature_store:
+    family: ai_ml
+    aliases: [feature store, feast]
+  a_b:
+    family: data
+    aliases: [experimentation]
+  lookerstudio:
+    family: data
+    aliases: [looker studio, google data studio, metabase, superset]
+  excel_advanced:
+    family: data
+    aliases: [pivot table, vlookup, power query]
+  vba:
+    family: data
+    aliases: [vba]
+  python_scraping:
+    family: language
+    aliases: [beautifulsoup, scrapy, selenium scraping]
+  api_gateway:
+    family: backend
+    aliases: [api gateway, kong, apigee]
+  rate_limit:
+    family: backend
+    aliases: [rate limit, throttling]
+  observability:
+    family: devops
+    aliases: [observability, opentelemetry, jaeger, zipkin]
+  sre:
+    family: devops
+    aliases: [sre, site reliability]
+  oncall:
+    family: devops
+    aliases: [on-call, oncall]
+  backup:
+    family: devops
+    aliases: [backup, disaster recovery]
+  windows_server:
+    family: devops
+    aliases: [windows server, active directory]
+  exchange:
+    family: devops
+    aliases: [ms exchange]
+  odoo:
+    family: backend
+    aliases: [odoo, erp]
+  odoo_python:
+    family: backend
+    aliases: []
+  sharepoint:
+    family: backend
+    aliases: [sharepoint]
+  powerapps:
+    family: data
+    aliases: [power apps, power automate]
+  rpa:
+    family: data
+    aliases: [rpa, uipath, automation anywhere, blue prism]
+  lowcode:
+    family: backend
+    aliases: [low-code, no-code, outsystems, mendix]
+  blockchain_nft:
+    family: backend
+    aliases: [nft, defi]
+  hyperledger:
+    family: backend
+    aliases: [hyperledger]
+  rust_systems:
+    family: language
+    aliases: []
+  zig:
+    family: language
+    aliases: [zig]
+  nim:
+    family: language
+    aliases: [nim]
+  julia:
+    family: language
+    aliases: [julia]
+  fortran:
+    family: language
+    aliases: [fortran]
+  delphi:
+    family: language
+    aliases: [delphi]
+  powershell_dsc:
+    family: devops
+    aliases: []
+  chef:
+    family: devops
+    aliases: [chef, puppet]
+  saltstack:
+    family: devops
+    aliases: [saltstack]
+  nagios:
+    family: devops
+    aliases: [nagios, zabbix]
+  pagerduty:
+    family: devops
+    aliases: [pagerduty]
+  sentry:
+    family: devops
+    aliases: [sentry]
+  newrelic:
+    family: devops
+    aliases: []
+  cloudwatch:
+    family: cloud
+    aliases: [cloudwatch]
+  iam_aws:
+    family: cloud
+    aliases: [aws iam]
+  rds:
+    family: cloud
+    aliases: [rds, aurora]
+  ecs:
+    family: cloud
+    aliases: [ecs, fargate]
+  cloudfront:
+    family: cloud
+    aliases: [cloudfront, cdn]
+  vpc:
+    family: cloud
+    aliases: [vpc]
+  azure_devops:
+    family: devops
+    aliases: [azure devops, tfs]
+  gcp_bigtable:
+    family: data
+    aliases: [bigtable, spanner]
+  pubsub:
+    family: cloud
+    aliases: [google pubsub]
+  dataflow:
+    family: data
+    aliases: [dataflow, dataproc]
+  composer:
+    family: data
+    aliases: [cloud composer]
+  looker_ml:
+    family: data
+    aliases: []
+  tensorflow_serving:
+    family: ai_ml
+    aliases: [tensorflow serving, torchserve, triton]
+  onnxruntime:
+    family: ai_ml
+    aliases: [onnxruntime]
+  peft:
+    family: ai_ml
+    aliases: [lora, peft, qlora, fine-tuning, finetune]
+  langchain_agents:
+    family: ai_ml
+    aliases: [agent, ai agent, tool calling]
+  mcp:
+    family: ai_ml
+    aliases: [mcp, model context protocol]
+  guardrails:
+    family: ai_ml
+    aliases: [guardrails, hallucination]
+  evaluation_llm:
+    family: ai_ml
+    aliases: [ragas, llm evaluation]
+  labeling:
+    family: ai_ml
+    aliases: [data labeling, annotation]
+  feature_eng:
+    family: ai_ml
+    aliases: [feature engineering]
+  time_series:
+    family: ai_ml
+    aliases: [time series, forecasting, arima, prophet]
+  recommenders:
+    family: ai_ml
+    aliases: [recommender, recommendation system, collaborative filtering]
+  clustering:
+    family: ai_ml
+    aliases: [kmeans, clustering, knn]
+  pandas_ai:
+    family: data
+    aliases: []
+  polars:
+    family: data
+    aliases: [polars]
+  duckdb:
+    family: data
+    aliases: [duckdb]
+  spark_streaming:
+    family: data
+    aliases: [spark streaming, structured streaming]
+  kinesis:
+    family: data
+    aliases: [kinesis]
+  eventbridge:
+    family: cloud
+    aliases: [eventbridge]
+  step_functions:
+    family: cloud
+    aliases: [step functions]
+  bicep:
+    family: cloud
+    aliases: [bicep, arm template]
+  cdk:
+    family: cloud
+    aliases: [aws cdk, cdk]
+  pulumi_extra:
+    family: cloud
+    aliases: []
+  github_actions:
+    family: devops
+    aliases: []
+  circleci:
+    family: devops
+    aliases: [circleci, travis]
+  teamcity:
+    family: devops
+    aliases: [teamcity, bamboo]
+  harness:
+    family: devops
+    aliases: [harness]
+  flux:
+    family: devops
+    aliases: [flux, gitops]
+  kustomize:
+    family: devops
+    aliases: [kustomize]
+  cilium:
+    family: devops
+    aliases: [cilium]
+  linkerd:
+    family: devops
+    aliases: [linkerd]
+  harbor:
+    family: devops
+    aliases: [harbor]
+  trivy:
+    family: security
+    aliases: [trivy, grype, snyk]
+  falco:
+    family: security
+    aliases: [falco]
+  opa:
+    family: security
+    aliases: [opa, open policy agent]
+  sast:
+    family: security
+    aliases: [sast, dast, sca]
+  secrets:
+    family: security
+    aliases: [secrets management]
+  soc2:
+    family: security
+    aliases: [soc2, pci-dss, pci dss]
+  jira_admin:
+    family: soft
+    aliases: [jira admin]
+  miro:
+    family: soft
+    aliases: [miro]
+  lucidchart:
+    family: soft
+    aliases: [lucidchart, draw.io]
+  presentation:
+    family: soft
+    aliases: [powerpoint, google slides]
+  excel_bi:
+    family: data
+    aliases: []
+  google_sheets:
+    family: data
+    aliases: [google sheets]
+  sqlbi:
+    family: data
+    aliases: [dax, power pivot]
+  qlik:
+    family: data
+    aliases: [qlik, qlikview, qlik sense]
+  cognos:
+    family: data
+    aliases: [cognos]
+  microstrategy:
+    family: data
+    aliases: [microstrategy]
+  thoughtspot:
+    family: data
+    aliases: [thoughtspot]
+  dataiku:
+    family: data
+    aliases: [dataiku]
+  databricks:
+    family: data
+    aliases: [databricks]
+  synapse:
+    family: data
+    aliases: [azure synapse]
+  fabric:
+    family: data
+    aliases: [microsoft fabric]
+  fivetran:
+    family: data
+    aliases: [fivetran, stitch, airbyte]
+  matillion:
+    family: data
+    aliases: [matillion]
+  talend:
+    family: data
+    aliases: [talend]
+  kafka_ui:
+    family: data
+    aliases: []
+  redis_enterprise:
+    family: data
+    aliases: []
+  couchbase:
+    family: data
+    aliases: [couchbase]
+  couchdb:
+    family: data
+    aliases: [couchdb]
+  firebase_firestore:
+    family: mobile
+    aliases: [firestore]
+  realm_sync:
+    family: mobile
+    aliases: []
+  push_notification:
+    family: mobile
+    aliases: [fcm, apns, push notification]
+  maps:
+    family: mobile
+    aliases: [google maps, mapkit]
+  payment_mobile:
+    family: mobile
+    aliases: [in-app purchase]
+  ci_mobile:
+    family: mobile
+    aliases: [bitrise]
+  detekt:
+    family: mobile
+    aliases: [detekt, swiftlint]
+  espresso:
+    family: qa
+    aliases: [espresso, xcui]
+  robot_framework:
+    family: qa
+    aliases: [robot framework]
+  specflow:
+    family: qa
+    aliases: [specflow]
+  mocha:
+    family: qa
+    aliases: [mocha, chai, jasmine]
+  pytest_bdd:
+    family: qa
+    aliases: [pytest-bdd]
+  allure:
+    family: qa
+    aliases: [allure]
+  sonar_qa:
+    family: qa
+    aliases: []
+  zapier:
+    family: backend
+    aliases: [zapier, make.com, n8n]
+  graphql_mesh:
+    family: backend
+    aliases: [graphql mesh]
+  trpc:
+    family: backend
+    aliases: [trpc]
+  bun:
+    family: backend
+    aliases: [bun, deno]
+  hono:
+    family: backend
+    aliases: [hono]
+  hapi:
+    family: backend
+    aliases: [hapi, koa]
+  sails:
+    family: backend
+    aliases: [sails]
+  adonis:
+    family: backend
+    aliases: [adonis, adonisjs]
+  meteor:
+    family: backend
+    aliases: [meteor]
+  feathers:
+    family: backend
+    aliases: [feathers]
+  loopback:
+    family: backend
+    aliases: [loopback]
+  struts:
+    family: backend
+    aliases: [struts]
+  play_framework:
+    family: backend
+    aliases: [play framework]
+  akka:
+    family: backend
+    aliases: [akka]
+  dropwizard:
+    family: backend
+    aliases: [dropwizard]
+  cakephp:
+    family: backend
+    aliases: [cakephp, codeigniter, yii]
+  lumen:
+    family: backend
+    aliases: [lumen]
+  slim:
+    family: backend
+    aliases: [slim]
+  sinatra:
+    family: backend
+    aliases: [sinatra]
+  hanami:
+    family: backend
+    aliases: [hanami]
+  actix:
+    family: backend
+    aliases: [actix, axum]
+  rocket_rs:
+    family: backend
+    aliases: [rocket rs]
+  fiber:
+    family: backend
+    aliases: [fiber, echo]
+  beego:
+    family: backend
+    aliases: [beego]
+  django_rest:
+    family: backend
+    aliases: [django rest, drf, django rest framework]
+  graphene:
+    family: backend
+    aliases: [graphene]
+  strawberry:
+    family: backend
+    aliases: [strawberry graphql]
+  pydantic:
+    family: backend
+    aliases: [pydantic]
+  poetry:
+    family: language
+    aliases: [poetry, pipenv]
+  conda:
+    family: language
+    aliases: [conda, anaconda]
+  ruff:
+    family: language
+    aliases: [ruff, black, flake8]
+  eslint:
+    family: frontend
+    aliases: [eslint, prettier]
+  typescript_strict:
+    family: language
+    aliases: []
+  monorepo:
+    family: devops
+    aliases: [nx, turborepo, lerna, monorepo]
+  bazel:
+    family: devops
+    aliases: [bazel]
+  cmake:
+    family: language
+    aliases: [cmake]
+  gdb:
+    family: language
+    aliases: [gdb]
+  valgrind:
+    family: language
+    aliases: [valgrind]
+  qt:
+    family: language
+    aliases: [qt, qml]
+  wpf:
+    family: backend
+    aliases: [wpf, winforms, maui]
+  blazor:
+    family: frontend
+    aliases: [blazor]
+  entity_framework:
+    family: backend
+    aliases: [entity framework, ef core, linq]
+  dapper:
+    family: backend
+    aliases: [dapper]
+  mediatr:
+    family: backend
+    aliases: [mediatr]
+  hangfire:
+    family: backend
+    aliases: [hangfire]
+  identityserver:
+    family: backend
+    aliases: [identityserver, duende]
+  rabbit_masstransit:
+    family: backend
+    aliases: [masstransit]
+  signalr_be:
+    family: backend
+    aliases: []
+  orleans:
+    family: backend
+    aliases: [orleans]
+  akka_net:
+    family: backend
+    aliases: [akka.net]
+  minio_s3:
+    family: cloud
+    aliases: [s3 compatible]
+  rest_json:
+    family: backend
+    aliases: [rest json]
+  soap:
+    family: backend
+    aliases: [soap, wsdl]
+  graphql_federation:
+    family: backend
+    aliases: [apollo federation]
+  websockets_be:
+    family: backend
+    aliases: []
+  sse:
+    family: backend
+    aliases: [server-sent events, sse]
+  cron:
+    family: backend
+    aliases: [cron, scheduler]
+  worker:
+    family: backend
+    aliases: [background job, worker]
+  search_engine:
+    family: data
+    aliases: [full-text search]
+  gis:
+    family: data
+    aliases: [gis, postgis]
+  image_proc:
+    family: ai_ml
+    aliases: [image processing]
+  audio:
+    family: ai_ml
+    aliases: [audio processing, speech recognition]
+  ocr:
+    family: ai_ml
+    aliases: [ocr, tesseract]
+  recommendation_sys:
+    family: ai_ml
+    aliases: []
+  python_typing:
+    family: language
+    aliases: [mypy]
+  jupyterlab:
+    family: data
+    aliases: [jupyterlab]
+  colab:
+    family: ai_ml
+    aliases: [google colab, colab]
+  kaggle:
+    family: ai_ml
+    aliases: [kaggle]
+  wandb:
+    family: ai_ml
+    aliases: [wandb, weights and biases]
+  tensorboard:
+    family: ai_ml
+    aliases: [tensorboard]
+  optuna:
+    family: ai_ml
+    aliases: [optuna, hyperparameter]
+  shap:
+    family: ai_ml
+    aliases: [shap, lime, explainable ai, xai]
+  imbalanced:
+    family: ai_ml
+    aliases: [imbalanced-learn, smote]
+  opencv_dnn:
+    family: ai_ml
+    aliases: [mediapipe]
+  detectron:
+    family: ai_ml
+    aliases: [detectron2, mmdetection]
+  whisperx:
+    family: ai_ml
+    aliases: [whisperx]
+  langchain_community:
+    family: ai_ml
+    aliases: []
+  haystack:
+    family: ai_ml
+    aliases: [haystack]
+  semantic_kernel:
+    family: ai_ml
+    aliases: [semantic kernel]
+  autogen:
+    family: ai_ml
+    aliases: [autogen, crewai]
+  dspy:
+    family: ai_ml
+    aliases: [dspy]
+  instructor:
+    family: ai_ml
+    aliases: [instructor]
+  tiktoken:
+    family: ai_ml
+    aliases: [tiktoken, tokenizer]
+  embedding_models:
+    family: ai_ml
+    aliases: [text-embedding, sentence-transformers]
+  rerank:
+    family: ai_ml
+    aliases: [rerank, cross-encoder]
+  chunking:
+    family: ai_ml
+    aliases: [chunking]
+  hybrid_search:
+    family: ai_ml
+    aliases: [hybrid search, bm25]
+  elasticsearch_knn:
+    family: ai_ml
+    aliases: [knn search]
+  pgvector:
+    family: ai_ml
+    aliases: [pgvector]
+  redisvl:
+    family: ai_ml
+    aliases: []
+  langfuse:
+    family: ai_ml
+    aliases: [langfuse]
+  phoenix:
+    family: ai_ml
+    aliases: [arize phoenix]
+  guardrails_ai:
+    family: ai_ml
+    aliases: []
+  content_safety:
+    family: ai_ml
+    aliases: [content safety, moderation]
+  promptflow:
+    family: ai_ml
+    aliases: [prompt flow, promptflow]
+  azure_ai_search:
+    family: ai_ml
+    aliases: [azure ai search, cognitive search]
+  bedrock:
+    family: ai_ml
+    aliases: [bedrock, amazon bedrock]
+  claude:
+    family: ai_ml
+    aliases: [claude, anthropic]
+  gemini:
+    family: ai_ml
+    aliases: [gemini, palm]
+  mistral:
+    family: ai_ml
+    aliases: [mistral, llama, llama2, llama3]
+  qwen:
+    family: ai_ml
+    aliases: [qwen]
+  vinai:
+    family: ai_ml
+    aliases: [phobert, vinai]
+  vietnamese_nlp:
+    family: ai_ml
+    aliases: [underthesea, pyvi, vncorenlp]
+  elasticsearch_vi:
+    family: data
+    aliases: []
+  wordpress_woo:
+    family: backend
+    aliases: [woocommerce]
+  prestashop:
+    family: backend
+    aliases: [prestashop]
+  opencart:
+    family: backend
+    aliases: [opencart]
+  haravan:
+    family: backend
+    aliases: [haravan, sapo]
+  sapo:
+    family: backend
+    aliases: []
+  kibana:
+    family: data
+    aliases: [kibana]
+  logstash:
+    family: devops
+    aliases: [logstash]
+  filebeat:
+    family: devops
+    aliases: [filebeat, beats]
+  fluentd:
+    family: devops
+    aliases: [fluentd, fluentbit]
+  syslog:
+    family: devops
+    aliases: [syslog]
+  iptables:
+    family: devops
+    aliases: [iptables]
+  selinux:
+    family: security
+    aliases: [selinux]
+  apparmor:
+    family: security
+    aliases: [apparmor]
+  fail2ban:
+    family: security
+    aliases: [fail2ban]
+  letsencrypt:
+    family: security
+    aliases: [letsencrypt, certbot, ssl]
+  waf:
+    family: security
+    aliases: [waf, web application firewall]
+  ddos:
+    family: security
+    aliases: [ddos]
+  csrf:
+    family: security
+    aliases: [csrf, xss, sql injection]
+  jwt_security:
+    family: security
+    aliases: []
+  oauth_pkce:
+    family: security
+    aliases: [pkce]
+  saml:
+    family: security
+    aliases: [saml]
+  ldap:
+    family: security
+    aliases: [ldap, active directory]
+  rbac:
+    family: security
+    aliases: [rbac, abac]
+  mfa:
+    family: security
+    aliases: [mfa, 2fa]
+  vault_k8s:
+    family: security
+    aliases: []
+  kyverno:
+    family: security
+    aliases: [kyverno]
+  gatekeeper:
+    family: security
+    aliases: [gatekeeper]
+  cubbyhole:
+    family: security
+    aliases: []
+  forensics:
+    family: security
+    aliases: [digital forensics]
+  threat_intel:
+    family: security
+    aliases: [threat intelligence, mitre att&ck]
+  incident_response:
+    family: security
+    aliases: [incident response]
+  grc:
+    family: security
+    aliases: [grc, governance]
+  iso9001:
+    family: soft
+    aliases: [iso 9001]
+  itil:
+    family: soft
+    aliases: [itil]
+  cobit:
+    family: soft
+    aliases: [cobit]
+  pmp:
+    family: soft
+    aliases: [pmp, prince2]
+  csm:
+    family: soft
+    aliases: [csm, cspo]
+  six_sigma:
+    family: soft
+    aliases: [six sigma, lean]
+  okr:
+    family: soft
+    aliases: [okr]
+  kpi:
+    family: soft
+    aliases: [kpi]
+  user_story:
+    family: soft
+    aliases: [user story, backlog]
+  wireframe:
+    family: frontend
+    aliases: [wireframe, prototype]
+  design_system:
+    family: frontend
+    aliases: [design system]
+  accessibility:
+    family: frontend
+    aliases: [a11y, accessibility, wcag]
+  i18n:
+    family: frontend
+    aliases: [i18n, l10n, internationalization]
+  seo:
+    family: frontend
+    aliases: [seo]
+  ga4:
+    family: data
+    aliases: [google analytics, ga4, gtm]
+  mixpanel:
+    family: data
+    aliases: [mixpanel, amplitude, hotjar]
+  segment:
+    family: data
+    aliases: [segment, cdp]
+  snowplow:
+    family: data
+    aliases: [snowplow]
+  gtm:
+    family: data
+    aliases: [google tag manager]
+  sql_window:
+    family: data
+    aliases: [window function, cte]
+  python_oop:
+    family: language
+    aliases: [oop, object oriented]
+  design_patterns:
+    family: backend
+    aliases: [design pattern, solid]
+  algorithms:
+    family: language
+    aliases: [algorithms, data structures, leetcode]
+  system_design:
+    family: backend
+    aliases: [system design, high availability, scalability]
+  load_balancing:
+    family: devops
+    aliases: [load balancing]
+  caching_strategy:
+    family: backend
+    aliases: [cache aside, write through]
+  db_replication:
+    family: data
+    aliases: [replication, sharding, partitioning]
+  cap_theorem:
+    family: backend
+    aliases: [cap theorem]
+  consistency:
+    family: backend
+    aliases: [eventual consistency]
+  tracing:
+    family: devops
+    aliases: [distributed tracing]
+  sla:
+    family: devops
+    aliases: [sla, slo, sli]
+  finops:
+    family: cloud
+    aliases: [finops, cost optimization]
+  multi_cloud:
+    family: cloud
+    aliases: [multi-cloud, hybrid cloud]
+  edge:
+    family: cloud
+    aliases: [edge computing]
+  iot_cloud:
+    family: cloud
+    aliases: [iot]
+  fiveg:
+    family: language
+    aliases: [5g]
+  computer_networks:
+    family: devops
+    aliases: [computer networks]
+  os_concepts:
+    family: language
+    aliases: [operating system]
+  compiler:
+    family: language
+    aliases: [compiler]
+  distributed_systems:
+    family: backend
+    aliases: [distributed systems]
+  concurrent:
+    family: language
+    aliases: [concurrency, multithreading, async]
+  memory_mgmt:
+    family: language
+    aliases: [garbage collection, memory management]
+  bitwise:
+    family: language
+    aliases: [bitwise]
+  regex:
+    family: language
+    aliases: [regex, regular expression]
+  jsonschema:
+    family: backend
+    aliases: [json schema]
+  yaml_skill:
+    family: devops
+    aliases: [yaml, toml]
+  markdown:
+    family: soft
+    aliases: [markdown]
+  mermaid:
+    family: soft
+    aliases: [mermaid]
+  plantuml:
+    family: soft
+    aliases: [plantuml, uml]
+  bpmn:
+    family: soft
+    aliases: [bpmn]
+  visio:
+    family: soft
+    aliases: [visio]
+  trello:
+    family: soft
+    aliases: [trello, asana, monday]
+  linear:
+    family: soft
+    aliases: [linear]
+  clickup:
+    family: soft
+    aliases: [clickup]
+  figma_devmode:
+    family: frontend
+    aliases: [figma dev mode]
+  zeplin:
+    family: frontend
+    aliases: [zeplin]
+  invision:
+    family: frontend
+    aliases: [invision]
+  principle:
+    family: frontend
+    aliases: [principle]
+  after_effects:
+    family: frontend
+    aliases: [after effects]
+  photoshop:
+    family: frontend
+    aliases: [photoshop, illustrator]
+  premiere:
+    family: frontend
+    aliases: [premiere]
+  blender_3d:
+    family: frontend
+    aliases: []
+  cinema4d:
+    family: frontend
+    aliases: [cinema 4d]
+  maya:
+    family: frontend
+    aliases: [maya]
+  zbrush:
+    family: frontend
+    aliases: [zbrush]
+  substance:
+    family: frontend
+    aliases: [substance painter]
+  godot:
+    family: language
+    aliases: [godot]
+  cocos:
+    family: language
+    aliases: [cocos, cocos2d]
+  phaser:
+    family: frontend
+    aliases: [phaser]
+  libgdx:
+    family: language
+    aliases: [libgdx]
+  spritekit:
+    family: mobile
+    aliases: [spritekit]
+  arkit:
+    family: mobile
+    aliases: [arkit, arcore, ar]
+  coreml:
+    family: mobile
+    aliases: [coreml]
+  mlkit:
+    family: mobile
+    aliases: [ml kit]
+  tensorflow_mobile:
+    family: mobile
+    aliases: []
+  graphql_hasura_extra:
+    family: backend
+    aliases: [postgraphile]
+  hasura_extra:
+    family: backend
+    aliases: []
+  appwrite:
+    family: backend
+    aliases: [appwrite]
+  pocketbase:
+    family: backend
+    aliases: [pocketbase]
+  directus:
+    family: backend
+    aliases: [directus]
+  keystone:
+    family: backend
+    aliases: [keystonejs]
+  payloadcms:
+    family: backend
+    aliases: [payload cms]
+  sanity:
+    family: backend
+    aliases: [sanity]
+  contentful:
+    family: backend
+    aliases: [contentful, strapi cms]
+  ghost:
+    family: backend
+    aliases: [ghost]
+  hugo:
+    family: frontend
+    aliases: [hugo, jekyll, gatsby]
+  eleventy:
+    family: frontend
+    aliases: [eleventy, 11ty]
+  webflow:
+    family: frontend
+    aliases: [webflow]
+  framer:
+    family: frontend
+    aliases: [framer]
+  three_fiber:
+    family: frontend
+    aliases: [react three fiber, r3f]
+  gsap:
+    family: frontend
+    aliases: [gsap]
+  framer_motion:
+    family: frontend
+    aliases: [framer motion]
+  lottie:
+    family: frontend
+    aliases: [lottie]
+  canvas:
+    family: frontend
+    aliases: [html canvas]
+  svg:
+    family: frontend
+    aliases: [svg]
+  webassembly:
+    family: frontend
+    aliases: [webassembly, wasm]
+  pwa_workbox:
+    family: frontend
+    aliases: [workbox, service worker]
+  indexeddb:
+    family: frontend
+    aliases: [indexeddb]
+  localstorage:
+    family: frontend
+    aliases: [localstorage]
+  cookies:
+    family: frontend
+    aliases: [cookies]
+  cors:
+    family: backend
+    aliases: [cors]
+  csrf_token:
+    family: security
+    aliases: []
+  helmet:
+    family: backend
+    aliases: [helmet]
+  rate_limiter_redis:
+    family: backend
+    aliases: []
+  bull:
+    family: backend
+    aliases: [bull, bullmq]
+  agenda:
+    family: backend
+    aliases: [agenda]
+  sidekiq_ruby:
+    family: backend
+    aliases: [sidekiq]
+  resque:
+    family: backend
+    aliases: [resque]
+  delayed_job:
+    family: backend
+    aliases: [delayed job]
+  celery_beat:
+    family: backend
+    aliases: [celery beat]
+  dramatiq:
+    family: backend
+    aliases: [dramatiq]
+  huey:
+    family: backend
+    aliases: [huey]
+  rq_python:
+    family: backend
+    aliases: [rq]
+  temporal:
+    family: backend
+    aliases: [temporal, cadence]
+  camunda:
+    family: backend
+    aliases: [camunda, zeebe]
+  airflow_extra:
+    family: data
+    aliases: [prefect, dagster, luigi]
+  mage:
+    family: data
+    aliases: [mage.ai, mage]
+  kestra:
+    family: data
+    aliases: [kestra]
+  n8n_data:
+    family: data
+    aliases: []
+  dbt_core:
+    family: data
+    aliases: [dbt core]
+  soda:
+    family: data
+    aliases: [soda, monte carlo]
+  elementary:
+    family: data
+    aliases: [elementary]
+  cosmosdb:
+    family: data
+    aliases: [cosmos db, cosmosdb]
+  firestore_be:
+    family: data
+    aliases: []
+  appwrite_db:
+    family: data
+    aliases: []
+  supabase_pg:
+    family: data
+    aliases: []
+  planetscale:
+    family: data
+    aliases: [planetscale]
+  neon:
+    family: data
+    aliases: [neon]
+  turso:
+    family: data
+    aliases: [turso]
+  cockroach:
+    family: data
+    aliases: [cockroachdb]
+  yugabyte:
+    family: data
+    aliases: [yugabyte]
+  vitess:
+    family: data
+    aliases: [vitess]
+  proxysql:
+    family: data
+    aliases: [proxysql]
+  pgbouncer:
+    family: data
+    aliases: [pgbouncer]
+  read_replica:
+    family: data
+    aliases: [read replica]
+  oltp:
+    family: data
+    aliases: [oltp, olap]
+  cube:
+    family: data
+    aliases: [cube.js, cube]
+  metrics_layer:
+    family: data
+    aliases: [metrics layer]
+  reverse_etl:
+    family: data
+    aliases: [reverse etl, census, hightouch]
+  feature_flags:
+    family: backend
+    aliases: [feature flag, launchdarkly, unleash]
+  ab_platform:
+    family: data
+    aliases: [optimizely, growthbook]
+  cdp_extra:
+    family: data
+    aliases: [rudderstack]
+  customerio:
+    family: data
+    aliases: [customer.io, braze, onesignal]
+  sendgrid:
+    family: backend
+    aliases: [sendgrid, mailgun, ses]
+  twilio:
+    family: backend
+    aliases: [twilio]
+  vonage:
+    family: backend
+    aliases: [vonage, nexmo]
+  agora:
+    family: backend
+    aliases: [agora]
+  livekit:
+    family: backend
+    aliases: [livekit]
+  mediasoup:
+    family: backend
+    aliases: [mediasoup]
+  ffmpeg:
+    family: backend
+    aliases: [ffmpeg]
+  imagekit:
+    family: backend
+    aliases: [imagekit, cloudinary]
+  s3_upload:
+    family: cloud
+    aliases: [presigned url]
+  multipart:
+    family: backend
+    aliases: [multipart upload]
+  resumable:
+    family: backend
+    aliases: [resumable upload]
+  webhooks:
+    family: backend
+    aliases: [webhook, webhooks]
+  idempotency:
+    family: backend
+    aliases: [idempotency]
+  retry:
+    family: backend
+    aliases: [circuit breaker]
+  bulkhead:
+    family: backend
+    aliases: [bulkhead]
+  timeout_pattern:
+    family: backend
+    aliases: [timeout]
+  healthcheck:
+    family: devops
+    aliases: [health check, readiness, liveness]
+  blue_green:
+    family: devops
+    aliases: [blue-green, canary, rolling update]
+  feature_toggle:
+    family: backend
+    aliases: [feature toggle]
+  chaos:
+    family: devops
+    aliases: [chaos engineering, litmus]
+  load_test_k6:
+    family: qa
+    aliases: []
+  contract_test:
+    family: qa
+    aliases: [pact, contract testing]
+  mutation_test:
+    family: qa
+    aliases: [mutation testing]
+  visual_reg:
+    family: qa
+    aliases: [visual regression, percy, chromatic]
+  accessibility_test:
+    family: qa
+    aliases: [axe, lighthouse]
+  security_test:
+    family: qa
+    aliases: [security testing]
+  exploratory:
+    family: qa
+    aliases: [exploratory testing]
+  test_plan:
+    family: qa
+    aliases: [test plan, test case]
+  bugzilla:
+    family: qa
+    aliases: [bugzilla, mantis]
+  testrail_extra:
+    family: qa
+    aliases: []
+  xray:
+    family: qa
+    aliases: [xray]
+  qase:
+    family: qa
+    aliases: [qase]
+  practitest:
+    family: qa
+    aliases: [practitest]
+  browserstack:
+    family: qa
+    aliases: [browserstack, saucelabs, lambdatest]
+  charles:
+    family: qa
+    aliases: [charles proxy, fiddler, mitmproxy]
+  wireshark_qa:
+    family: qa
+    aliases: []
+  postman_newman:
+    family: qa
+    aliases: [newman]
+  insomnia:
+    family: qa
+    aliases: [insomnia, bruno, hoppscotch]
+  soapui:
+    family: qa
+    aliases: [soapui]
+  swagger_ui:
+    family: backend
+    aliases: [swagger ui]
+  redoc:
+    family: backend
+    aliases: [redoc]
+  stoplight:
+    family: backend
+    aliases: [stoplight]
+  postman_mock:
+    family: backend
+    aliases: [mock server, wiremock, mountebank]
+  json_server:
+    family: backend
+    aliases: [json-server]
+  faker:
+    family: qa
+    aliases: [faker, factory boy]
+  testcontainers:
+    family: qa
+    aliases: [testcontainers]
+  localstack:
+    family: devops
+    aliases: [localstack]
+  minikube:
+    family: devops
+    aliases: [minikube, kind, k3s]
+  tilt:
+    family: devops
+    aliases: [tilt, skaffold, telepresence]
+  docker_desktop:
+    family: devops
+    aliases: [docker desktop]
+  podman:
+    family: devops
+    aliases: [podman, buildah]
+  containerd:
+    family: devops
+    aliases: [containerd, cri-o]
+  crio:
+    family: devops
+    aliases: []
+  calico:
+    family: devops
+    aliases: [calico, flannel, weave]
+  metallb:
+    family: devops
+    aliases: [metallb]
+  ingress_nginx:
+    family: devops
+    aliases: [ingress-nginx, traefik]
+  cert_manager:
+    family: devops
+    aliases: [cert-manager]
+  external_dns:
+    family: devops
+    aliases: [external-dns]
+  cluster_autoscaler:
+    family: cloud
+    aliases: [cluster autoscaler, karpenter]
+  hpa:
+    family: devops
+    aliases: [hpa, vpa]
+  pdb:
+    family: devops
+    aliases: [pod disruption budget]
+  networkpolicy:
+    family: security
+    aliases: [networkpolicy]
+  rbac_k8s:
+    family: security
+    aliases: [k8s rbac]
+  secrets_k8s:
+    family: security
+    aliases: [sealed-secrets, sops, external-secrets]
+  kyverno_extra:
+    family: security
+    aliases: []
+  polaris:
+    family: security
+    aliases: [polaris]
+  kube_bench:
+    family: security
+    aliases: [kube-bench, kube-hunter]
+  cis:
+    family: security
+    aliases: [cis benchmark]
+  nist:
+    family: security
+    aliases: [nist]
+  pci:
+    family: security
+    aliases: []
+  hipaa:
+    family: security
+    aliases: [hipaa]
+  pdpa:
+    family: security
+    aliases: [pdpa, nghi dinh 13]
+  data_privacy:
+    family: security
+    aliases: [data privacy, an toan thong tin]
+  vietnamese_law:
+    family: soft
+    aliases: [luat an ninh mang]
+  english_b1:
+    family: soft
+    aliases: [toeic, ielts]
+  japanese:
+    family: soft
+    aliases: [japanese, jlpt, nihongo]
+  korean:
+    family: soft
+    aliases: [korean, topik]
+  chinese:
+    family: soft
+    aliases: [chinese, hsk]
+  presentation_en:
+    family: soft
+    aliases: [presentation skill]
+  negotiation:
+    family: soft
+    aliases: [negotiation]
+  leadership:
+    family: soft
+    aliases: [leadership]
+  hiring:
+    family: soft
+    aliases: [hiring, interviewing]
+  estimation:
+    family: soft
+    aliases: [estimation, story point]
+  risk:
+    family: soft
+    aliases: [risk management]
+  budget:
+    family: soft
+    aliases: [budget]
+  vendor:
+    family: soft
+    aliases: [vendor management]
+  outsourcing:
+    family: soft
+    aliases: [outsourcing, body shopping]
+  product_sense:
+    family: soft
+    aliases: [product sense]
+  growth:
+    family: soft
+    aliases: [growth, growth hacking]
+  marketplace:
+    family: domain
+    aliases: [marketplace]
+  ecommerce:
+    family: domain
+    aliases: [e-commerce, ecommerce, thuong mai dien tu]
+  fintech:
+    family: domain
+    aliases: [fintech, banking, core banking]
+  healthtech:
+    family: domain
+    aliases: [healthtech, his, emr]
+  edtech:
+    family: domain
+    aliases: [edtech]
+  logistics:
+    family: domain
+    aliases: [logistics, wms, tms]
+  hrtech:
+    family: domain
+    aliases: [hris, payroll]
+  adtech:
+    family: domain
+    aliases: [adtech, programmatic]
+  gaming:
+    family: language
+    aliases: [game developer, game programming]
+  betting:
+    family: backend
+    aliases: []
+  gis_web:
+    family: frontend
+    aliases: [leaflet, mapbox, openlayers]
+  three_maps:
+    family: frontend
+    aliases: [cesium]
+  d3_extra:
+    family: frontend
+    aliases: [highcharts, echarts, chart.js]
+  antv:
+    family: frontend
+    aliases: [antv, g2]
+  nivo:
+    family: frontend
+    aliases: [nivo, recharts]
+  visx:
+    family: frontend
+    aliases: [visx]
+  observable:
+    family: data
+    aliases: [observable]
+  quarto:
+    family: data
+    aliases: [quarto, rmarkdown]
+  shiny:
+    family: data
+    aliases: [shiny]
+  dash:
+    family: data
+    aliases: [plotly dash, dash]
+  bokeh:
+    family: data
+    aliases: [bokeh]
+  altair:
+    family: data
+    aliases: [altair, vega]
+  ggplot:
+    family: data
+    aliases: [ggplot, ggplot2]
+  dplyr:
+    family: data
+    aliases: [dplyr, tidyverse]
+  data_table_r:
+    family: data
+    aliases: [data.table]
+  python_stats:
+    family: data
+    aliases: [statsmodels, scipy]
+  sklearn_extra:
+    family: ai_ml
+    aliases: []
+  imblearn:
+    family: ai_ml
+    aliases: []
+  category_encoders:
+    family: ai_ml
+    aliases: [category encoders]
+  featuretools:
+    family: ai_ml
+    aliases: [featuretools]
+  tsfresh:
+    family: ai_ml
+    aliases: [tsfresh]
+  sktime:
+    family: ai_ml
+    aliases: [sktime, darts]
+  prophet_extra:
+    family: ai_ml
+    aliases: []
+  neuralprophet:
+    family: ai_ml
+    aliases: [neuralprophet]
+  lstm:
+    family: ai_ml
+    aliases: [lstm, gru, rnn]
+  transformer:
+    family: ai_ml
+    aliases: [transformer, attention]
+  gan:
+    family: ai_ml
+    aliases: [gan, diffusion]
+  reinforcement:
+    family: ai_ml
+    aliases: [reinforcement learning, rl, gymnasium]
+  multi_agent:
+    family: ai_ml
+    aliases: [multi-agent]
+  graph_ml:
+    family: ai_ml
+    aliases: [gnn, graph neural]
+  causal:
+    family: ai_ml
+    aliases: [causal inference, dowhy]
+  bayesian:
+    family: ai_ml
+    aliases: [bayesian, pymc, numpyro]
+  survival:
+    family: ai_ml
+    aliases: [survival analysis]
+  anomaly:
+    family: ai_ml
+    aliases: [anomaly detection]
+  clustering_extra:
+    family: ai_ml
+    aliases: [dbscan, hdbscan, gmm]
+  dim_reduction:
+    family: ai_ml
+    aliases: [pca, tsne, umap, svd]
+  nlp_classic:
+    family: ai_ml
+    aliases: [tf-idf, bag of words, word2vec, fasttext]
+  spacy:
+    family: ai_ml
+    aliases: [spacy, nltk]
+  stanza:
+    family: ai_ml
+    aliases: [stanza]
+  flair:
+    family: ai_ml
+    aliases: [flair]
+  gensim:
+    family: ai_ml
+    aliases: [gensim, lda, topic modeling]
+  textrank:
+    family: ai_ml
+    aliases: [textrank]
+  ner:
+    family: ai_ml
+    aliases: [ner, named entity]
+  sentiment:
+    family: ai_ml
+    aliases: [sentiment analysis]
+  classification:
+    family: ai_ml
+    aliases: [text classification]
+  qa_nlp:
+    family: ai_ml
+    aliases: [question answering]
+  summarization:
+    family: ai_ml
+    aliases: [summarization]
+  translation:
+    family: ai_ml
+    aliases: [machine translation]
+  asr:
+    family: ai_ml
+    aliases: [asr]
+  tts:
+    family: ai_ml
+    aliases: [tts, text to speech]
+  diarization:
+    family: ai_ml
+    aliases: [speaker diarization]
+  ocr_extra:
+    family: ai_ml
+    aliases: [paddleocr, easyocr]
+  layoutlm:
+    family: ai_ml
+    aliases: [layoutlm, document ai]
+  donut:
+    family: ai_ml
+    aliases: [donut]
+  clip:
+    family: ai_ml
+    aliases: [clip, blip]
+  segment_anything:
+    family: ai_ml
+    aliases: [segment anything, sam]
+  controlnet:
+    family: ai_ml
+    aliases: [controlnet]
+  lora_sd:
+    family: ai_ml
+    aliases: []
+  comfyui:
+    family: ai_ml
+    aliases: [comfyui, automatic1111]
+  opencv_contrib:
+    family: ai_ml
+    aliases: []
+  albumentations:
+    family: ai_ml
+    aliases: [albumentations]
+  detectron_extra:
+    family: ai_ml
+    aliases: []
+  mmpose:
+    family: ai_ml
+    aliases: [mmpose, pose estimation]
+  deepsort:
+    family: ai_ml
+    aliases: [deepsort, object tracking]
+  slam:
+    family: ai_ml
+    aliases: [slam]
+  lidar:
+    family: ai_ml
+    aliases: [lidar]
+  autoware:
+    family: ai_ml
+    aliases: [autoware]
+  ros2:
+    family: language
+    aliases: [ros2]
+  gazebo:
+    family: language
+    aliases: [gazebo]
+  opencv_ros:
+    family: ai_ml
+    aliases: []
+  plc:
+    family: language
+    aliases: [plc, scada]
+  modbus:
+    family: language
+    aliases: [modbus]
+  canbus:
+    family: language
+    aliases: [can bus]
+  autosar:
+    family: language
+    aliases: [autosar]
+  matlab_simulink:
+    family: language
+    aliases: [simulink]
+  labview:
+    family: language
+    aliases: [labview]
+  altium:
+    family: language
+    aliases: [altium, kicad]
+  fpga:
+    family: language
+    aliases: [fpga]
+  asic:
+    family: language
+    aliases: [asic]
+  verilog_extra:
+    family: language
+    aliases: [systemverilog]
+  uvm:
+    family: language
+    aliases: [uvm]
+  cad:
+    family: industrial
+    aliases: [autocad, solidworks, catia]
+  cam:
+    family: industrial
+    aliases: [mastercam]
+  ansys:
+    family: language
+    aliases: [ansys]
+  abaqus:
+    family: language
+    aliases: [abaqus]
+  comsol:
+    family: language
+    aliases: [comsol]
+  python_scientific:
+    family: language
+    aliases: [scipy]
+  sympy:
+    family: language
+    aliases: [sympy]
+  numba:
+    family: language
+    aliases: [numba, cython]
+  dask:
+    family: data
+    aliases: [dask, ray]
+  vaex:
+    family: data
+    aliases: [vaex]
+  modin:
+    family: data
+    aliases: [modin]
+  spark_sql:
+    family: data
+    aliases: [spark sql]
+  delta:
+    family: data
+    aliases: [delta]
+  unity_catalog:
+    family: data
+    aliases: [unity catalog]
+  lake_fs:
+    family: data
+    aliases: [lakefs]
+  iceberg_rest:
+    family: data
+    aliases: []
+  nessie:
+    family: data
+    aliases: [nessie]
+  amundsen:
+    family: data
+    aliases: [amundsen, datahub, atlas]
+  collibra:
+    family: data
+    aliases: [collibra, alation]
+  great_exp_extra:
+    family: data
+    aliases: []
+  pandera:
+    family: data
+    aliases: [pandera]
+  pydantic_data:
+    family: data
+    aliases: []
+  jsonschema_data:
+    family: data
+    aliases: []
+  avro_extra:
+    family: data
+    aliases: []
+  parquet:
+    family: data
+    aliases: [parquet, orc]
+  arrow:
+    family: data
+    aliases: [apache arrow]
+  feather:
+    family: data
+    aliases: [feather]
+  hdf5:
+    family: data
+    aliases: [hdf5]
+  netcdf:
+    family: data
+    aliases: [netcdf]
+  geotiff:
+    family: data
+    aliases: [geotiff]
+  shapefile:
+    family: data
+    aliases: [shapefile]
+  geopandas:
+    family: data
+    aliases: [geopandas]
+  rasterio:
+    family: data
+    aliases: [rasterio]
+  qgis:
+    family: data
+    aliases: [qgis, arcgis]
+  mapreduce:
+    family: data
+    aliases: [mapreduce]
+  yarn_hadoop:
+    family: data
+    aliases: [yarn]
+  oozie:
+    family: data
+    aliases: [oozie]
+  sqoop:
+    family: data
+    aliases: [sqoop]
+  flume:
+    family: data
+    aliases: [flume]
+  impala:
+    family: data
+    aliases: [impala]
+  kudu:
+    family: data
+    aliases: [kudu]
+  hbase:
+    family: data
+    aliases: [hbase]
+  phoenix_hbase:
+    family: data
+    aliases: [apache phoenix]
+  druid:
+    family: data
+    aliases: [druid, apache druid]
+  pinot:
+    family: data
+    aliases: [pinot, apache pinot]
+  kylin:
+    family: data
+    aliases: [kylin]
+  clickhouse_extra:
+    family: data
+    aliases: []
+  rockset:
+    family: data
+    aliases: [rockset]
+  materialize:
+    family: data
+    aliases: [materialize]
+  risingwave:
+    family: data
+    aliases: [risingwave]
+  flink_cdc:
+    family: data
+    aliases: [flink cdc]
+  debezium_extra:
+    family: data
+    aliases: []
+  maxwell:
+    family: data
+    aliases: [maxwell]
+  canal:
+    family: data
+    aliases: [canal]
+  kafka_connect_extra:
+    family: data
+    aliases: []
+  spark_delta:
+    family: data
+    aliases: []
+  glue:
+    family: data
+    aliases: [aws glue]
+  athena:
+    family: data
+    aliases: [athena]
+  emr:
+    family: data
+    aliases: [emr]
+  msk:
+    family: data
+    aliases: [msk]
+  msk_connect:
+    family: data
+    aliases: []
+  redshift_spectrum:
+    family: data
+    aliases: [redshift spectrum]
+  synapse_spark:
+    family: data
+    aliases: [synapse spark]
+  fabric_extra:
+    family: data
+    aliases: []
+  powerbi_gateway:
+    family: data
+    aliases: [on-premises data gateway]
+  ssas_tabular:
+    family: data
+    aliases: [tabular, multidimensional]
+  analysis_services:
+    family: data
+    aliases: []
+  mdX:
+    family: data
+    aliases: [mdx]
+  dax_extra:
+    family: data
+    aliases: []
+  tabular_editor:
+    family: data
+    aliases: [tabular editor]
+  alteryx_extra:
+    family: data
+    aliases: []
+  knime:
+    family: data
+    aliases: [knime]
+  rapidminer:
+    family: data
+    aliases: [rapidminer]
+  weka:
+    family: ai_ml
+    aliases: [weka]
+  orange:
+    family: ai_ml
+    aliases: [orange]
+  spss_modeler:
+    family: ai_ml
+    aliases: [spss modeler]
+  sas_viya:
+    family: ai_ml
+    aliases: [sas viya]
+  h2o:
+    family: ai_ml
+    aliases: [h2o, driverless ai]
+  dataiku_extra:
+    family: data
+    aliases: []
+  cnvrg:
+    family: ai_ml
+    aliases: [cnvrg]
+  determined:
+    family: ai_ml
+    aliases: [determined ai]
+  ray_tune:
+    family: ai_ml
+    aliases: [ray tune]
+  katib:
+    family: ai_ml
+    aliases: [katib]
+  seldon:
+    family: ai_ml
+    aliases: [seldon, kserve, bento]
+  bentoml:
+    family: ai_ml
+    aliases: [bentoml]
+  cortex:
+    family: ai_ml
+    aliases: [cortex]
+  seldon_core:
+    family: ai_ml
+    aliases: []
+  mlserver:
+    family: ai_ml
+    aliases: [mlserver]
+  triton_extra:
+    family: ai_ml
+    aliases: []
+  tensorrt:
+    family: ai_ml
+    aliases: [tensorrt]
+  openvino:
+    family: ai_ml
+    aliases: [openvino]
+  coreml_convert:
+    family: ai_ml
+    aliases: []
+  tflite_extra:
+    family: ai_ml
+    aliases: []
+  onnx_extra:
+    family: ai_ml
+    aliases: []
+  quantization:
+    family: ai_ml
+    aliases: [quantization, pruning, distillation]
+  ggml:
+    family: ai_ml
+    aliases: [ggml, gguf, llama.cpp]
+  vllm_extra:
+    family: ai_ml
+    aliases: [tgi, text generation inference]
+  sglang:
+    family: ai_ml
+    aliases: [sglang]
+  lmdeploy:
+    family: ai_ml
+    aliases: [lmdeploy]
+  ollama_extra:
+    family: ai_ml
+    aliases: []
+  openwebui:
+    family: ai_ml
+    aliases: [open webui]
+  litellm:
+    family: ai_ml
+    aliases: [litellm]
+  groq:
+    family: ai_ml
+    aliases: [groq]
+  together:
+    family: ai_ml
+    aliases: [together.ai]
+  fireworks:
+    family: ai_ml
+    aliases: [fireworks]
+  replicate:
+    family: ai_ml
+    aliases: [replicate]
+  huggingface_hub:
+    family: ai_ml
+    aliases: [huggingface hub]
+  hf_spaces:
+    family: ai_ml
+    aliases: [hf spaces]
+  gradio_extra:
+    family: ai_ml
+    aliases: []
+  chainlit:
+    family: ai_ml
+    aliases: [chainlit]
+  streamlit_chat:
+    family: ai_ml
+    aliases: []
+  rag_eval:
+    family: ai_ml
+    aliases: [truera, deepeval]
+  prompt_version:
+    family: ai_ml
+    aliases: [prompt versioning]
+  humanloop:
+    family: ai_ml
+    aliases: [humanloop]
+  helix:
+    family: ai_ml
+    aliases: []
+  label_studio:
+    family: ai_ml
+    aliases: [label studio, cvat, roboflow]
+  prodigy:
+    family: ai_ml
+    aliases: [prodigy]
+  doccano:
+    family: ai_ml
+    aliases: [doccano]
+  scale_ai:
+    family: ai_ml
+    aliases: [scale ai]
+  snorkel:
+    family: ai_ml
+    aliases: [snorkel]
+  weak_supervision:
+    family: ai_ml
+    aliases: [weak supervision]
+  active_learning:
+    family: ai_ml
+    aliases: [active learning]
+  semi_supervised:
+    family: ai_ml
+    aliases: [semi-supervised]
+  self_supervised:
+    family: ai_ml
+    aliases: [self-supervised, mae, simclr]
+  few_shot:
+    family: ai_ml
+    aliases: [few-shot, zero-shot]
+  in_context:
+    family: ai_ml
+    aliases: [in-context learning]
+  chain_of_thought:
+    family: ai_ml
+    aliases: [chain of thought, cot, toon]
+  tool_use:
+    family: ai_ml
+    aliases: [function calling, tool use]
+  mcp_extra:
+    family: ai_ml
+    aliases: []
+  a2a:
+    family: ai_ml
+    aliases: [a2a]
+  voice_agent:
+    family: ai_ml
+    aliases: [voice agent, realtime api]
+  multimodal:
+    family: ai_ml
+    aliases: [multimodal]
+  video_understanding:
+    family: ai_ml
+    aliases: [video understanding]
+  document_qa:
+    family: ai_ml
+    aliases: [document qa]
+  table_qa:
+    family: ai_ml
+    aliases: [table qa]
+  code_gen:
+    family: ai_ml
+    aliases: [codegen, copilot]
+  cursor_ai:
+    family: ai_ml
+    aliases: [cursor, windsurf]
+  rag_graph:
+    family: ai_ml
+    aliases: [graph rag, knowledge graph]
+  neo4j_graphrag:
+    family: ai_ml
+    aliases: [neo4j]
+  llama_parse:
+    family: ai_ml
+    aliases: [llama parse, unstructured]
+  pymupdf:
+    family: ai_ml
+    aliases: [pymupdf, pdfplumber]
+  tika:
+    family: ai_ml
+    aliases: [apache tika]
+  docling:
+    family: ai_ml
+    aliases: [docling]
+  marker:
+    family: ai_ml
+    aliases: [marker]
+  nougat:
+    family: ai_ml
+    aliases: [nougat]
+  grobid:
+    family: ai_ml
+    aliases: [grobid]
+  tabula:
+    family: data
+    aliases: [tabula, camelot]
+  excel_parse:
+    family: data
+    aliases: [openpyxl]
+  csv:
+    family: data
+    aliases: [csv]
+  xml_parse:
+    family: data
+    aliases: [lxml, beautifulsoup]
+  web_scraping:
+    family: language
+    aliases: [web scraping, crawl]
+  playwright_scrape:
+    family: language
+    aliases: []
+  scrapy_extra:
+    family: language
+    aliases: []
+  splash:
+    family: language
+    aliases: [splash]
+  crawling_polite:
+    family: language
+    aliases: [robots.txt]
+  proxy:
+    family: language
+    aliases: [rotating proxy]
+  captcha:
+    family: language
+    aliases: []
+  selenium_grid:
+    family: qa
+    aliases: [selenium grid]
+  playwright_extra:
+    family: qa
+    aliases: []
+  puppeteer:
+    family: qa
+    aliases: [puppeteer]
+  webdriverio:
+    family: qa
+    aliases: [webdriverio]
+  nightwatch:
+    family: qa
+    aliases: [nightwatch]
+  protractor:
+    family: qa
+    aliases: [protractor]
+  testcafe:
+    family: qa
+    aliases: [testcafe]
+  detox:
+    family: qa
+    aliases: [detox]
+  maestro:
+    family: qa
+    aliases: [maestro]
+  calabash:
+    family: qa
+    aliases: [calabash]
+  espresso_extra:
+    family: qa
+    aliases: []
+  xcui_extra:
+    family: qa
+    aliases: [xcuitest]
+  appium_extra:
+    family: qa
+    aliases: []
+  browserstack_app:
+    family: qa
+    aliases: [app center]
+  firebase_testlab:
+    family: qa
+    aliases: [firebase test lab]
+  gcloud:
+    family: cloud
+    aliases: [gcloud]
+  az_cli:
+    family: cloud
+    aliases: [az cli]
+  aws_cli:
+    family: cloud
+    aliases: [aws cli]
+  eksctl:
+    family: cloud
+    aliases: [eksctl]
+  kops:
+    family: cloud
+    aliases: [kops]
+  rancher:
+    family: cloud
+    aliases: [rancher]
+  portainer:
+    family: devops
+    aliases: [portainer]
+  lens:
+    family: devops
+    aliases: [lens, k9s]
+  octant:
+    family: devops
+    aliases: [octant]
+  dashboard_k8s:
+    family: devops
+    aliases: [kubernetes dashboard]
+  prometheus_operator:
+    family: devops
+    aliases: [prometheus operator, kube-prometheus]
+  thanos:
+    family: devops
+    aliases: [thanos, cortex, mimir]
+  victoriametrics:
+    family: devops
+    aliases: [victoriametrics]
+  influx_telegraf:
+    family: devops
+    aliases: [telegraf]
+  collectd:
+    family: devops
+    aliases: [collectd]
+  node_exporter:
+    family: devops
+    aliases: [node exporter]
+  blackbox:
+    family: devops
+    aliases: [blackbox exporter]
+  alertmanager:
+    family: devops
+    aliases: [alertmanager]
+  opsgenie:
+    family: devops
+    aliases: [opsgenie]
+  victorops:
+    family: devops
+    aliases: [victorops]
+  statuspage:
+    family: devops
+    aliases: [statuspage]
+  pager:
+    family: devops
+    aliases: []
+  runbook:
+    family: devops
+    aliases: [runbook]
+  postmortem:
+    family: devops
+    aliases: [postmortem, blameless]
+  incident_io:
+    family: devops
+    aliases: [incident.io]
+  firehydrant:
+    family: devops
+    aliases: [firehydrant]
+  rootly:
+    family: devops
+    aliases: [rootly]
+  slack_ops:
+    family: devops
+    aliases: []
+  chatops:
+    family: devops
+    aliases: [chatops]
+  ansible_awx:
+    family: devops
+    aliases: [awx, tower]
+  salt_extra:
+    family: devops
+    aliases: []
+  puppet_extra:
+    family: devops
+    aliases: []
+  chef_extra:
+    family: devops
+    aliases: []
+  terraform_cloud:
+    family: cloud
+    aliases: [terraform cloud, tfc]
+  terragrunt:
+    family: cloud
+    aliases: [terragrunt]
+  atlas_tf:
+    family: cloud
+    aliases: [atlas]
+  crossplane:
+    family: cloud
+    aliases: [crossplane]
+  pulumi_extra2:
+    family: cloud
+    aliases: []
+  cdk8s:
+    family: cloud
+    aliases: [cdk8s]
+  helmfile:
+    family: devops
+    aliases: [helmfile]
+  jsonnet:
+    family: devops
+    aliases: [jsonnet]
+  cue:
+    family: devops
+    aliases: [cue]
+  kustomize_extra:
+    family: devops
+    aliases: []
+  argo_workflows:
+    family: devops
+    aliases: [argo workflows]
+  argo_events:
+    family: devops
+    aliases: [argo events]
+  argo_rollouts:
+    family: devops
+    aliases: [argo rollouts]
+  flagger:
+    family: devops
+    aliases: [flagger]
+  spinnaker:
+    family: devops
+    aliases: [spinnaker]
+  tekton:
+    family: devops
+    aliases: [tekton]
+  jenkins_x:
+    family: devops
+    aliases: [jenkins x]
+  drone:
+    family: devops
+    aliases: [drone]
+  woodpecker:
+    family: devops
+    aliases: [woodpecker]
+  buildkite:
+    family: devops
+    aliases: [buildkite]
+  github_packages:
+    family: devops
+    aliases: [github packages]
+  ghcr:
+    family: devops
+    aliases: [ghcr]
+  ecr:
+    family: cloud
+    aliases: [ecr]
+  acr:
+    family: cloud
+    aliases: [acr]
+  gcr:
+    family: cloud
+    aliases: [gcr, artifact registry]
+  harbor_extra:
+    family: devops
+    aliases: []
+  quay:
+    family: devops
+    aliases: [quay]
+  dockerhub:
+    family: devops
+    aliases: [docker hub]
+  cosign:
+    family: security
+    aliases: [cosign, sigstore]
+  slsa:
+    family: security
+    aliases: [slsa, sbom, cyclonedx, spdx]
+  grype_extra:
+    family: security
+    aliases: []
+  trivy_extra:
+    family: security
+    aliases: []
+  snyk_extra:
+    family: security
+    aliases: []
+  dependabot:
+    family: security
+    aliases: [dependabot, renovate]
+  owasp_dependency:
+    family: security
+    aliases: [owasp dependency check]
+  sonarqube_extra:
+    family: security
+    aliases: [sonarcloud]
+  checkmarx:
+    family: security
+    aliases: [checkmarx, veracode, fortify]
+  snyk_code:
+    family: security
+    aliases: []
+  semgrep:
+    family: security
+    aliases: [semgrep, codeql]
+  bandit:
+    family: security
+    aliases: [bandit]
+  gosec:
+    family: security
+    aliases: [gosec]
+  brakeman:
+    family: security
+    aliases: [brakeman]
+  eslint_security:
+    family: security
+    aliases: [eslint-plugin-security]
+  zap_extra:
+    family: security
+    aliases: []
+  burp_extra:
+    family: security
+    aliases: []
+  nuclei:
+    family: security
+    aliases: [nuclei]
+  nmap_extra:
+    family: security
+    aliases: []
+  metasploit_extra:
+    family: security
+    aliases: []
+  bloodhound:
+    family: security
+    aliases: [bloodhound]
+  mimikatz:
+    family: security
+    aliases: [mimikatz]
+  volatility:
+    family: security
+    aliases: [volatility]
+  autopsy:
+    family: security
+    aliases: [autopsy]
+  wireshark_extra:
+    family: security
+    aliases: []
+  tcpdump:
+    family: security
+    aliases: [tcpdump]
+  suricata:
+    family: security
+    aliases: [suricata, snort]
+  zeek:
+    family: security
+    aliases: [zeek, bro]
+  splunk_es:
+    family: security
+    aliases: [splunk es]
+  qradar:
+    family: security
+    aliases: [qradar]
+  sentinel:
+    family: security
+    aliases: [microsoft sentinel]
+  chronicle:
+    family: security
+    aliases: [chronicle]
+  elastic_siem:
+    family: security
+    aliases: [elastic siem]
+  wazuh:
+    family: security
+    aliases: [wazuh, ossec]
+  crowd_strike:
+    family: security
+    aliases: [crowdstrike, sentinelone]
+  defender:
+    family: security
+    aliases: [microsoft defender]
+  edr:
+    family: security
+    aliases: [edr, xdr]
+  soar:
+    family: security
+    aliases: [soar, phantom, xsoar]
+  thehive:
+    family: security
+    aliases: [thehive, misp]
+  opencti:
+    family: security
+    aliases: [opencti]
+  mitre:
+    family: security
+    aliases: [mitre]
+  kill_chain:
+    family: security
+    aliases: [cyber kill chain]
+  purple_team:
+    family: security
+    aliases: [purple team, red team, blue team]
+  tabletop:
+    family: security
+    aliases: [tabletop exercise]
+  bcp:
+    family: security
+    aliases: [bcp, drp]
+  backup_extra:
+    family: devops
+    aliases: [veeam, velero]
+  velero_extra:
+    family: devops
+    aliases: []
+  restic:
+    family: devops
+    aliases: [restic, borg]
+  rsync:
+    family: devops
+    aliases: [rsync]
+  nfs:
+    family: devops
+    aliases: [nfs, smb]
+  iscsi:
+    family: devops
+    aliases: [iscsi]
+  ceph:
+    family: devops
+    aliases: [ceph, longhorn, rook]
+  gluster:
+    family: devops
+    aliases: [glusterfs]
+  minio_extra:
+    family: devops
+    aliases: []
+  seaweedfs:
+    family: devops
+    aliases: [seaweedfs]
+  juicefs:
+    family: devops
+    aliases: [juicefs]
+  openebs:
+    family: devops
+    aliases: [openebs]
+  portworx:
+    family: devops
+    aliases: [portworx]
+  netapp:
+    family: devops
+    aliases: [netapp]
+  emc:
+    family: devops
+    aliases: [emc]
+  hpux:
+    family: devops
+    aliases: [hp-ux, aix, solaris]
+  zfs:
+    family: devops
+    aliases: [zfs]
+  lvm:
+    family: devops
+    aliases: [lvm]
+  raid:
+    family: devops
+    aliases: [raid]
+  san:
+    family: devops
+    aliases: [san, nas]
+  fc:
+    family: devops
+    aliases: [fibre channel]
+  infiniband:
+    family: devops
+    aliases: [infiniband]
+  rdma:
+    family: devops
+    aliases: [rdma]
+  dpdk:
+    family: devops
+    aliases: [dpdk]
+  sriov:
+    family: devops
+    aliases: [sriov]
+  numa:
+    family: devops
+    aliases: [numa]
+  kvm:
+    family: devops
+    aliases: [kvm, qemu]
+  xen:
+    family: devops
+    aliases: [xen]
+  hyperv:
+    family: devops
+    aliases: [hyper-v]
+  proxmox:
+    family: devops
+    aliases: [proxmox]
+  openstack:
+    family: cloud
+    aliases: [openstack]
+  ovirt:
+    family: cloud
+    aliases: [ovirt]
+  cloudstack:
+    family: cloud
+    aliases: [cloudstack]
+  vsphere_extra:
+    family: cloud
+    aliases: []
+  nsx:
+    family: cloud
+    aliases: [nsx]
+  vcf:
+    family: cloud
+    aliases: [vmware cloud foundation]
+  nutanix:
+    family: cloud
+    aliases: [nutanix]
+  hci:
+    family: cloud
+    aliases: [hci]
+  vmware_tanzu:
+    family: cloud
+    aliases: [tanzu]
+  anthos:
+    family: cloud
+    aliases: [anthos]
+  arc:
+    family: cloud
+    aliases: [azure arc]
+  outposts:
+    family: cloud
+    aliases: [aws outposts]
+  stackit:
+    family: cloud
+    aliases: []
+  fpt_cloud:
+    family: cloud
+    aliases: [fpt cloud, viettel cloud, vnpt cloud]
+  viettel_cloud:
+    family: cloud
+    aliases: []
+  bizfly:
+    family: cloud
+    aliases: [bizfly, vng cloud]
+  vultr:
+    family: cloud
+    aliases: [vultr, linode]
+  hetzner:
+    family: cloud
+    aliases: [hetzner]
+  ovh:
+    family: cloud
+    aliases: [ovh]
+  scaleway:
+    family: cloud
+    aliases: [scaleway]
+  oracle_cloud:
+    family: cloud
+    aliases: [oci, oracle cloud]
+  ibm_cloud:
+    family: cloud
+    aliases: [ibm cloud]
+  huawei_cloud:
+    family: cloud
+    aliases: [huawei cloud]
+  tencent_cloud:
+    family: cloud
+    aliases: [tencent cloud]
+  baidu_cloud:
+    family: cloud
+    aliases: [baidu cloud]
+  naver_cloud:
+    family: cloud
+    aliases: [naver cloud]
+  kakao_cloud:
+    family: cloud
+    aliases: [kakao cloud]
+  nhn_cloud:
+    family: cloud
+    aliases: [nhn cloud]

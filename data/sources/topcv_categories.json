@@ -1,0 +1,13 @@
+{
+  "topcv_backend": "https://www.topcv.vn/tim-viec-lam-backend",
+  "topcv_frontend": "https://www.topcv.vn/tim-viec-lam-frontend",
+  "topcv_fullstack": "https://www.topcv.vn/tim-viec-lam-fullstack",
+  "topcv_tester": "https://www.topcv.vn/tim-viec-lam-tester",
+  "topcv_devops": "https://www.topcv.vn/tim-viec-lam-devops",
+  "topcv_python": "https://www.topcv.vn/tim-viec-lam-python",
+  "topcv_java": "https://www.topcv.vn/tim-viec-lam-java",
+  "topcv_javascript": "https://www.topcv.vn/tim-viec-lam-javascript",
+  "topcv_reactjs": "https://www.topcv.vn/tim-viec-lam-reactjs",
+  "topcv_mobile": "https://www.topcv.vn/tim-viec-lam-mobile",
+  "topcv_data": "https://www.topcv.vn/tim-viec-lam-data-engineer"
+}
