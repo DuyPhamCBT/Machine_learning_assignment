@@ -1,0 +1,59 @@
+# Cấu hình tập trung — mọi bước đọc file này.
+
+crawl:
+  headless: true
+  delay_seconds: 1.2
+  page_load_timeout: 30
+  max_pages: 2
+  max_jobs_per_source: 40
+  workers: 2
+  output_dir: data/raw
+
+sources:
+  itviec: data/sources/itviec.json
+  topcv: data/sources/topcv.json
+  itviec_categories: data/sources/itviec_categories.json
+  topcv_categories: data/sources/topcv_categories.json
+
+usd_to_vnd: 26000
+
+features:
+  min_jd_chars: 80
+  skill_weight: 0.80
+  text_weight: 0.10
+  structured_weight: 0.10
+  svd_components: 40
+  tfidf_max_features: 4000
+
+level_map:
+  intern: 0
+  fresher: 1
+  junior: 2
+  middle: 3
+  mid: 3
+  senior: 4
+  lead: 5
+  manager: 5
+  principal: 5
+
+kmeans:
+  k_min: 8
+  k_max: 14
+  random_state: 42
+  n_init: 20
+  max_iter: 400
+
+# Không gian trước K-Means / KNN (sau vector Features 722-d đã L2).
+space:
+  scaler: none
+  pca_components: 50
+  l2: true
+
+# Lọc JD trước K-Means / KNN: bỏ sales, design, CNC, JD quá ít skill IT.
+corpus:
+  min_it_skills: 3
+  min_it_skills_if_it_family: 2
+
+knn:
+  n_neighbors: 20
+  default_top_n: 10
