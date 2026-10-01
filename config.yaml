@@ -57,3 +57,13 @@ corpus:
 knn:
   n_neighbors: 20
   default_top_n: 10
+
+# Upload CV: ưu tiên khối Technical Skills; intern/fresher tối đa 3 skill từ project.
+cv_extract:
+  enabled: true
+  ignore_intro: true
+  ignore_education: true
+  max_project_extras: 6
+  max_project_extras_intern: 3
+  collapse:
+    css: [tailwind, bootstrap]

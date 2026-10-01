@@ -1,0 +1,48 @@
+# Siết alias rộng / gộp skill trùng khi load skills.yaml.
+# Áp dụng cho app chính và mọi lần train (không cần IT_JOB_EXP).
+
+block_aliases:
+  - solid
+  - cache
+  - caching
+  - s3
+  - ssl
+
+drop_aliases:
+  redis_cache:
+    - cache
+    - caching
+  aws:
+    - s3
+    - ec2
+    - lambda
+    - eks
+  uiux:
+    - user experience
+    - user interface
+  git:
+    - github
+    - gitlab
+    - bitbucket
+  ci_cd:
+    - jenkins
+    - gitlab ci
+    - github actions
+    - continuous integration
+  ingress_nginx:
+    - traefik
+  letsencrypt:
+    - ssl
+  design_patterns:
+    - solid
+  minio_s3:
+    - s3 compatible
+  nginx_devops:
+    - load balancer
+
+merge_into:
+  redis_cache: redis
+  minio_s3: minio
+  minio_extra: minio
+  nginx_devops: nginx
+  ingress_nginx: nginx

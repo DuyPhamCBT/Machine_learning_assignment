@@ -593,7 +593,7 @@ def main() -> None:
                 st.caption("Intern / Fresher: max_level_gap = 1. Cấp khác: 2.")
     if art is None:
         st.error(
-            "Chưa có model. Trong folder `IT_Job_Recommendation` chạy:\n\n"
+            "Chưa có model. Trong thư mục project chạy:\n\n"
             "`python scripts/run_all.py`\n\n"
             "hoặc notebook `notebooks/01_full_pipeline.ipynb`."
         )

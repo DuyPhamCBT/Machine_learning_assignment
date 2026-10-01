@@ -2,18 +2,18 @@
 
 Pipeline **không giám sát**: cào JD (ITviec + TopCV) → làm sạch → rút skill theo từ điển → **lọc corpus IT** → vector TF-IDF/SVD → **PCA + L2** → **K-Means** gom cụm → **KNN Cosine** xếp hạng. Demo Streamlit nhận CV (PDF / DOCX / TXT).
 
-Không dùng LLM embedding / GPU. Cấu hình tập trung ở `config.yaml`.
+Không dùng LLM embedding / GPU. Cấu hình tập trung ở `config.yaml`. Repo này là bản chạy được (pipeline + Streamlit + model đã train), không kèm các folder thí nghiệm nội bộ.
 
 **Lần train hiện tại** (xem `reports/evaluation.json`):
 
 | | |
 |---|---|
-| JD thô → sạch → **IT dùng để train** | 1711 → 1699 → **1019** |
-| Nguồn (sau lọc) | ITviec 541 · TopCV 478 |
-| Vector | 689-d (skill 647 + text SVD 40 + năm/cấp 2) → PCA 50-d (~**49%** phương sai) |
+| JD thô → sạch → **IT dùng để train** | 1711 → 1699 → **1015** |
+| Nguồn (sau lọc) | ITviec 538 · TopCV 477 |
+| Vector | 686-d (skill 644 + text SVD 40 + năm/cấp 2) → PCA 50-d (~**49%** phương sai) |
 | K-Means | **K = 13** (argmax silhouette 8…14) |
-| Silhouette / Davies–Bouldin | 0.13 / 2.40 |
-| Precision@10 (`role_family`, 40 query) | **0.44** |
+| Silhouette / Davies–Bouldin | 0.13 / 2.37 |
+| Precision@10 (`role_family`, 40 query) | **0.46** |
 
 Silhouette thấp hơn corpus cũ (0.24 trên 1699 JD) vì đã **bỏ cụm non-IT dễ tách** (design, sales, CNC, JD 0 skill). Cụm còn lại đọc được hơn (QA ~81% đúng family, AI/ML ~84%). Plot PCA 2D **không** đo chất lượng cụm — K-Means chạy trên 50 chiều.
 
@@ -63,7 +63,7 @@ ITviec / TopCV
         │  Lọc corpus IT  (bỏ sales / design / CNC / ít skill)
         │  TF-IDF skill 80% + SVD text 10% + năm/cấp 10% → L2
         ▼
- models/job_vectors.npy                  ~689-d
+ models/job_vectors.npy                  ~686-d
         │
         ▼
  models/space.joblib                     (4) PCA(50) + L2  — không StandardScaler
@@ -85,9 +85,9 @@ App **không crawl live** và **không train lại**. Thiếu model: `python scr
 ## 3. Cấu trúc thư mục
 
 ```
-IT_Job_Recommendation/
+Machine_learning_assignment/
 ├── README.md
-├── config.yaml                      # crawl, features, space, corpus, knn
+├── config.yaml                      # crawl, features, space, corpus, knn, cv_extract
 ├── requirements.txt
 ├── notebooks/01_full_pipeline.ipynb
 ├── app/
@@ -108,19 +108,20 @@ IT_Job_Recommendation/
 │   ├── crawl/
 │   ├── preprocess/
 │   ├── features/
-│   │   ├── skills.py                # taxonomy, COMMON/SKIP/DESIGN families
+│   │   ├── skills.py                # taxonomy + alias_policy
 │   │   ├── corpus_filter.py         # lọc JD IT
 │   │   └── vectorizer.py
 │   ├── clustering/                  # space + K-Means
 │   ├── recommend/knn.py
 │   ├── evaluation/
-│   └── cv_parse/                    # PDF / DOCX (kèm bảng) / TXT
+│   └── cv_parse/                    # PDF / DOCX (kèm bảng) / TXT; ưu tiên khối Skills
 ├── data/
 │   ├── raw/combined.jsonl           # ~1711 dòng
 │   ├── dictionaries/skills.yaml
+│   ├── dictionaries/alias_policy.yaml  # siết alias rộng, gộp skill trùng
 │   ├── samples/cv_fresher_python.txt
 │   ├── interim/jobs_clean.pkl       # 1699 JD sạch
-│   └── processed/jobs.pkl           # 1019 JD IT + cụm — app đọc file này
+│   └── processed/jobs.pkl           # 1015 JD IT + cụm — app đọc file này
 ├── models/                          # pipeline, space, kmeans, knn, vectors
 └── reports/                         # evaluation.json, PCA HTML so sánh
 ```
@@ -132,7 +133,7 @@ IT_Job_Recommendation/
 Python **3.10–3.12**. Chrome chỉ cần khi **cào lại** JD. Demo không cần Chrome.
 
 ```powershell
-cd IT_Job_Recommendation
+cd Machine_learning_assignment
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
@@ -141,7 +142,7 @@ python -m pip install -r requirements.txt
 Linux/macOS:
 
 ```bash
-cd IT_Job_Recommendation
+cd Machine_learning_assignment
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -167,7 +168,7 @@ uv run streamlit run app/streamlit_app.py
 4. Kết quả: (1) Top 10 liên quan, (2) việc thích hợp cấp, expander việc bị loại.
 5. **Khám phá cụm** — scatter PCA 2D (chỉ để xem) + profile cụm.
 
-Đổi `skills.yaml` / parser cấp: restart app (`artifacts.py` reload extractor và parse lại `level_norm` từ title). Đổi vector/KNN: phải train lại.
+Đổi `skills.yaml` / `alias_policy.yaml` / parser cấp: restart app (`artifacts.py` reload extractor). Đổi vector/KNN: phải train lại.
 
 ---
 
@@ -219,25 +220,27 @@ Selenium headless, ITviec + TopCV. JSONL incremental theo URL. Không login, kh�
 - **Cấp JD**: đọc **title trước** — `Trưởng nhóm` / Team lead → lead. Không dùng `alias in blob` (tránh `lead` ⊂ `leadership`).
 - `role_family`: rule trên title — **nhãn yếu**, không phải target train.
 
-### (3) Features + lọc corpus — 1699 → 1019
+### (3) Features + lọc corpus — 1699 → 1015
 
-`data/dictionaries/skills.yaml`: canonical + alias, alias dài trước, biên Unicode (`java` ≠ `javascript`). Family hiển thị: language / frontend / backend / mobile / data / ai_ml / devops / cloud / qa / security. Bỏ `soft` / `domain` / `industrial`. Blocklist alias ngắn (`ui`, `cv`, `json`, …). Photoshop/Figma **không** tính là skill IT khi lọc.
+`data/dictionaries/skills.yaml`: canonical + alias, alias dài trước, biên Unicode (`java` ≠ `javascript`). `alias_policy.yaml` siết alias rộng (`cache`, `solid`, `s3` ≠ AWS, GitHub ≠ git) và gộp skill trùng (redis_cache → redis, minio_s3 → minio, ingress_nginx → nginx). Family hiển thị: language / frontend / backend / mobile / data / ai_ml / devops / cloud / qa / security. Bỏ `soft` / `domain` / `industrial`. Blocklist alias ngắn (`ui`, `cv`, `json`, …). Photoshop/Figma **không** tính là skill IT khi lọc.
+
+Upload CV (`cv_extract` trong `config.yaml`): ưu tiên khối Technical Skills; bỏ intro/education; intern/fresher tối đa 3 skill từ project; thứ tự theo vị trí trên CV.
 
 Giữ JD nếu:
 
 - Title không phải sales / thiết kế / CNC / …, **và**
 - ≥ 2 skill IT nếu `role_family` là Backend, QA, DevOps, …; **hoặc** ≥ 3 skill IT với các family khác.
 
-Lần train này: drop **680** (267 title + 413 ít skill).
+Lần train này: drop **684** (267 title + 417 ít skill).
 
 Mỗi JD còn lại một vector L2:
 
 | Khối | Chiều (lần train) | Trọng số |
 |---|---:|---:|
-| TF-IDF skill canonical | 647 | 0.80 |
+| TF-IDF skill canonical | 644 | 0.80 |
 | TF-IDF 1–2 gram phần yêu cầu + SVD | 40 | 0.10 |
 | `years_mid` (clip 0–12), `level_ordinal` (MinMax) | 2 | 0.10 |
-| **Tổng** | **689** | L2 lần cuối |
+| **Tổng** | **686** | L2 lần cuối |
 
 Query CV: bỏ `git` / `html` / `css` khỏi khối skill khi còn skill khác. Không có text CV thì zero khối SVD.
 
@@ -247,11 +250,11 @@ Query CV: bỏ `git` / `html` / `css` khỏi khối skill khi còn skill khác. 
 
 **Không** StandardScaler (z-score trên TF-IDF thưa làm PCA đuổi skill hiếm, JD IT bị nén một cụm).
 
-689-d → **PCA(50)** → L2 (~49% phương sai). Euclidean trên L2 ≈ cosine. **K = argmax silhouette** trên 8…14 → **13**.
+686-d → **PCA(50)** → L2 (~49% phương sai). Euclidean trên L2 ≈ cosine. **K = argmax silhouette** trên 8…14 → **13**.
 
 Tên cụm gán *sau* (mode `role_family` + top skill). Cụm **không lọc** KNN — chỉ hiện “nhóm nghề gần nhất”.
 
-Cụm lần train này (ví dụ): Java/Spring, C#/.NET, Fullstack JS, AI/ML, ETL, PowerBI, QA, DevOps, Security, Mobile, Sysadmin, Odoo/SAP.
+Cụm lần train này (ví dụ): Java/Spring, C#/.NET, Fullstack JS, AI/ML, ETL, QA, DevOps, Security, Mobile, C++/embedded, Sysadmin.
 
 ### (5) KNN
 
@@ -304,13 +307,13 @@ score = cosine
 
 | Metric | Giá trị |
 |---|---|
-| JD train | 1019 |
+| JD train | 1015 |
 | K | 13 |
 | PCA 50-d explained | 0.49 |
 | Silhouette | 0.13 |
-| Davies–Bouldin | 2.40 |
-| Size cụm | 36 … 126 |
-| Precision@10 | 0.44 (40 query) |
+| Davies–Bouldin | 2.37 |
+| Size cụm | 38 … 129 |
+| Precision@10 | 0.46 (40 query) |
 | % `Other` | 21% |
 
 So với corpus 1699 + StandardScaler: silhouette 0.24 (phình vì cụm design/rỗng skill), P@10 0.41, PCA 50-d 29%, size 72–369. File plot: `reports/pca_compare_filter.html`.

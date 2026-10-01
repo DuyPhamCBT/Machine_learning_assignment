@@ -1,25 +1,41 @@
-"""Đường dẫn và config tập trung cho cả pipeline."""
+"""Đường dẫn và config tập trung cho cả pipeline.
+
+Mặc định: ROOT = folder project (chứa config.yaml).
+Optional: set env IT_JOB_EXP=/path/to/exp để ghi model/report ra folder khác;
+data/raw, dictionaries, interim (jobs_clean) vẫn dùng chung project.
+"""
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-CONFIG_PATH = ROOT / "config.yaml"
-DATA_DIR = ROOT / "data"
+
+def _exp_root() -> Path:
+    raw = os.environ.get("IT_JOB_EXP", "").strip()
+    return Path(raw).resolve() if raw else PROJECT_ROOT
+
+
+EXP_ROOT = _exp_root()
+ROOT = EXP_ROOT
+
+CONFIG_PATH = EXP_ROOT / "config.yaml"
+DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 INTERIM_DIR = DATA_DIR / "interim"
-PROCESSED_DIR = DATA_DIR / "processed"
+PROCESSED_DIR = EXP_ROOT / "data" / "processed"
 DICT_DIR = DATA_DIR / "dictionaries"
 SOURCES_DIR = DATA_DIR / "sources"
 SAMPLES_DIR = DATA_DIR / "samples"
-MODELS_DIR = ROOT / "models"
-REPORTS_DIR = ROOT / "reports"
+MODELS_DIR = EXP_ROOT / "models"
+REPORTS_DIR = EXP_ROOT / "reports"
 
 SKILLS_PATH = DICT_DIR / "skills.yaml"
+ALIAS_POLICY_PATH = DICT_DIR / "alias_policy.yaml"
 COMBINED_JSONL = RAW_DIR / "combined.jsonl"
 JOBS_CLEAN = INTERIM_DIR / "jobs_clean.pkl"
 JOBS_FEATURED = PROCESSED_DIR / "jobs_featured.pkl"
@@ -42,7 +58,10 @@ DEFAULT_META = META_PATH
 
 
 def load_config() -> dict:
-    with CONFIG_PATH.open(encoding="utf-8") as f:
+    path = CONFIG_PATH
+    if not path.exists():
+        raise FileNotFoundError(f"Không thấy config: {path}")
+    with path.open(encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
 
 

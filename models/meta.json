@@ -1,6 +1,6 @@
 {
-  "n_jobs": 1019,
-  "n_features_raw": 689,
+  "n_jobs": 1015,
+  "n_features_raw": 686,
   "n_features": 50,
   "best_k": 13,
   "space": {
@@ -14,138 +14,106 @@
       "l2"
     ],
     "pca_n_components": 50,
-    "pca_explained_variance": 0.488953428724788
+    "pca_explained_variance": 0.4907409369657751
   },
   "k_search": [
     {
       "k": 8,
-      "inertia": 780.7357234333926,
-      "silhouette": 0.0988303922072889,
-      "davies_bouldin": 2.8207051471769966
+      "inertia": 777.0176838599668,
+      "silhouette": 0.10071919799048608,
+      "davies_bouldin": 2.848673051826135
     },
     {
       "k": 9,
-      "inertia": 758.5529404772032,
-      "silhouette": 0.10848263327656224,
-      "davies_bouldin": 2.7619775949582888
+      "inertia": 755.760511038576,
+      "silhouette": 0.10820628548520829,
+      "davies_bouldin": 2.7149665805601
     },
     {
       "k": 10,
-      "inertia": 741.9713782092235,
-      "silhouette": 0.1110782364826849,
-      "davies_bouldin": 2.670986409157937
+      "inertia": 736.223984724403,
+      "silhouette": 0.11494703264281002,
+      "davies_bouldin": 2.6631252537656915
     },
     {
       "k": 11,
-      "inertia": 722.3310770921958,
-      "silhouette": 0.11843195829441512,
-      "davies_bouldin": 2.5614889932569223
+      "inertia": 720.0908288198567,
+      "silhouette": 0.11861043658869434,
+      "davies_bouldin": 2.5459041615430387
     },
     {
       "k": 12,
-      "inertia": 709.4351783664437,
-      "silhouette": 0.12217379514882251,
-      "davies_bouldin": 2.407375204307605
+      "inertia": 706.2237012082618,
+      "silhouette": 0.11897582445117347,
+      "davies_bouldin": 2.467928923613027
     },
     {
       "k": 13,
-      "inertia": 693.0259723586385,
-      "silhouette": 0.12625326413151913,
-      "davies_bouldin": 2.399438232968788
+      "inertia": 688.6722107943707,
+      "silhouette": 0.12718006266240905,
+      "davies_bouldin": 2.366285143757868
     },
     {
       "k": 14,
-      "inertia": 680.2328241107317,
-      "silhouette": 0.1256649769234396,
-      "davies_bouldin": 2.4621139807054546
+      "inertia": 677.6998142962033,
+      "silhouette": 0.12609216282799093,
+      "davies_bouldin": 2.4160548272684137
     }
   ],
   "cluster_profiles": {
     "0": {
       "cluster_id": 0,
-      "name": "Backend: microservices, java, spring",
-      "role_family": "Backend",
-      "size": 126,
+      "name": "Other: sql, powerbi, data_analysis",
+      "role_family": "Other",
+      "size": 92,
       "top_skills": [
-        "microservices",
-        "java",
-        "spring",
-        "kubernetes"
+        "sql",
+        "powerbi",
+        "data_analysis",
+        "odoo"
       ],
-      "example_title": "Backend Developer",
+      "example_title": "Data Analyst",
       "median_salary_vnd": null,
-      "mean_years": 3.8273809523809526,
+      "mean_years": 3.141304347826087,
       "level_mode": "junior"
     },
     "1": {
       "cluster_id": 1,
-      "name": "Other: linux, networking, backup",
-      "role_family": "Other",
-      "size": 88,
+      "name": "Mobile: android, ios, swift",
+      "role_family": "Mobile",
+      "size": 59,
       "top_skills": [
-        "linux",
-        "networking",
-        "backup",
-        "network_security"
+        "android",
+        "ios",
+        "swift",
+        "ci_cd"
       ],
-      "example_title": "System Administrator",
+      "example_title": "Android Developer",
       "median_salary_vnd": null,
-      "mean_years": 2.3863636363636362,
+      "mean_years": 3.0254237288135593,
       "level_mode": "junior"
     },
     "2": {
       "cluster_id": 2,
-      "name": "DevOps: ci_cd, kubernetes, terraform",
-      "role_family": "DevOps",
-      "size": 83,
+      "name": "Backend: cpp, embedded_c, python",
+      "role_family": "Backend",
+      "size": 38,
       "top_skills": [
-        "ci_cd",
-        "kubernetes",
-        "terraform",
-        "monitoring"
+        "cpp",
+        "embedded_c",
+        "python",
+        "linux"
       ],
-      "example_title": "DevOps Engineer",
+      "example_title": "(/) Embedded Software Engineer (C, C++)",
       "median_salary_vnd": null,
-      "mean_years": 3.2349397590361444,
+      "mean_years": 2.5065789473684212,
       "level_mode": "junior"
     },
     "3": {
       "cluster_id": 3,
-      "name": "Fullstack: javascript, css, html",
-      "role_family": "Fullstack",
-      "size": 99,
-      "top_skills": [
-        "javascript",
-        "css",
-        "html",
-        "react"
-      ],
-      "example_title": "Fullstack Developer",
-      "median_salary_vnd": null,
-      "mean_years": 2.515151515151515,
-      "level_mode": "junior"
-    },
-    "4": {
-      "cluster_id": 4,
-      "name": "AI/ML: python, llm, machine_learning",
-      "role_family": "AI/ML",
-      "size": 81,
-      "top_skills": [
-        "python",
-        "llm",
-        "machine_learning",
-        "langchain_agents"
-      ],
-      "example_title": "AI Engineer",
-      "median_salary_vnd": null,
-      "mean_years": 3.1419753086419755,
-      "level_mode": "junior"
-    },
-    "5": {
-      "cluster_id": 5,
       "name": "Data: etl, sql, data_warehouse",
       "role_family": "Data",
-      "size": 57,
+      "size": 64,
       "top_skills": [
         "etl",
         "sql",
@@ -154,46 +122,46 @@
       ],
       "example_title": "Data Engineer",
       "median_salary_vnd": null,
-      "mean_years": 3.6973684210526314,
+      "mean_years": 3.70703125,
+      "level_mode": "junior"
+    },
+    "4": {
+      "cluster_id": 4,
+      "name": "DevOps: kubernetes, terraform, monitoring",
+      "role_family": "DevOps",
+      "size": 89,
+      "top_skills": [
+        "kubernetes",
+        "terraform",
+        "monitoring",
+        "iac"
+      ],
+      "example_title": "DevOps Engineer",
+      "median_salary_vnd": null,
+      "mean_years": 3.134831460674157,
+      "level_mode": "junior"
+    },
+    "5": {
+      "cluster_id": 5,
+      "name": "Backend: dotnet, csharp, sql",
+      "role_family": "Backend",
+      "size": 58,
+      "top_skills": [
+        "dotnet",
+        "csharp",
+        "sql",
+        "sqlserver"
+      ],
+      "example_title": ".NET Back-end Developer (C#, ASP.NET)",
+      "median_salary_vnd": null,
+      "mean_years": 3.0474137931034484,
       "level_mode": "junior"
     },
     "6": {
       "cluster_id": 6,
-      "name": "Security: siem, network_security, iso27001",
-      "role_family": "Security",
-      "size": 60,
-      "top_skills": [
-        "siem",
-        "network_security",
-        "iso27001",
-        "edr"
-      ],
-      "example_title": "Information Security",
-      "median_salary_vnd": null,
-      "mean_years": 2.6708333333333334,
-      "level_mode": "junior"
-    },
-    "7": {
-      "cluster_id": 7,
-      "name": "Other: uiux, openai, sql",
-      "role_family": "Other",
-      "size": 116,
-      "top_skills": [
-        "uiux",
-        "openai",
-        "sql",
-        "photoshop"
-      ],
-      "example_title": "Product Owner",
-      "median_salary_vnd": null,
-      "mean_years": 3.0495689655172415,
-      "level_mode": "junior"
-    },
-    "8": {
-      "cluster_id": 8,
       "name": "QA: automation_test, test_plan, selenium",
       "role_family": "QA",
-      "size": 98,
+      "size": 97,
       "top_skills": [
         "automation_test",
         "test_plan",
@@ -202,80 +170,112 @@
       ],
       "example_title": "Manual Tester",
       "median_salary_vnd": null,
-      "mean_years": 3.5255102040816326,
+      "mean_years": 3.536082474226804,
       "level_mode": "junior"
+    },
+    "7": {
+      "cluster_id": 7,
+      "name": "Security: siem, network_security, iso27001",
+      "role_family": "Security",
+      "size": 59,
+      "top_skills": [
+        "siem",
+        "network_security",
+        "iso27001",
+        "edr"
+      ],
+      "example_title": "Information Security",
+      "median_salary_vnd": null,
+      "mean_years": 2.6652542372881354,
+      "level_mode": "junior"
+    },
+    "8": {
+      "cluster_id": 8,
+      "name": "Backend: microservices, java, spring",
+      "role_family": "Backend",
+      "size": 129,
+      "top_skills": [
+        "microservices",
+        "java",
+        "spring",
+        "docker"
+      ],
+      "example_title": "Backend Developer",
+      "median_salary_vnd": null,
+      "mean_years": 3.7887596899224807,
+      "level_mode": "senior"
     },
     "9": {
       "cluster_id": 9,
-      "name": "Data: powerbi, sql, tableau",
-      "role_family": "Data",
-      "size": 42,
+      "name": "Fullstack: javascript, css, html",
+      "role_family": "Fullstack",
+      "size": 88,
       "top_skills": [
-        "powerbi",
-        "sql",
-        "tableau",
-        "python"
+        "javascript",
+        "css",
+        "html",
+        "react"
       ],
-      "example_title": "Data Analyst",
+      "example_title": "Fullstack Developer",
       "median_salary_vnd": null,
-      "mean_years": 2.75,
+      "mean_years": 2.508522727272727,
       "level_mode": "junior"
     },
     "10": {
       "cluster_id": 10,
-      "name": "Other: odoo, sql, sap",
-      "role_family": "Other",
-      "size": 36,
+      "name": "AI/ML: python, llm, machine_learning",
+      "role_family": "AI/ML",
+      "size": 78,
       "top_skills": [
-        "odoo",
-        "sql",
-        "sap",
-        "consistency"
+        "python",
+        "llm",
+        "machine_learning",
+        "langchain_agents"
       ],
-      "example_title": "SAP ABAP Cloud/ RAP Technical Consultant",
+      "example_title": "AI Engineer",
       "median_salary_vnd": null,
-      "mean_years": 2.9791666666666665,
+      "mean_years": 3.2051282051282053,
       "level_mode": "junior"
     },
     "11": {
       "cluster_id": 11,
-      "name": "Backend: csharp, dotnet, sql",
-      "role_family": "Backend",
-      "size": 67,
+      "name": "Other: openai, uiux, claude",
+      "role_family": "Other",
+      "size": 93,
       "top_skills": [
-        "csharp",
-        "dotnet",
-        "sql",
-        "sqlserver"
+        "openai",
+        "uiux",
+        "claude",
+        "photoshop"
       ],
-      "example_title": ".NET Back-end Developer (C#, ASP.NET)",
+      "example_title": "Product Owner",
       "median_salary_vnd": null,
-      "mean_years": 2.8992537313432836,
+      "mean_years": 2.5618279569892475,
       "level_mode": "junior"
     },
     "12": {
       "cluster_id": 12,
-      "name": "Mobile: android, ios, ci_cd",
-      "role_family": "Mobile",
-      "size": 66,
+      "name": "Other: networking, linux, backup",
+      "role_family": "Other",
+      "size": 71,
       "top_skills": [
-        "android",
-        "ios",
-        "ci_cd",
-        "uiux"
+        "networking",
+        "linux",
+        "backup",
+        "network_security"
       ],
-      "example_title": "Android Developer",
+      "example_title": "System Administrator",
       "median_salary_vnd": null,
-      "mean_years": 2.9393939393939394,
+      "mean_years": 2.4753521126760565,
       "level_mode": "junior"
     }
   },
   "sources": {
-    "itviec": 541,
-    "topcv": 478
+    "itviec": 538,
+    "topcv": 477
   },
   "role_family_counts": {
-    "Other": 215,
+    "Other": 214,
     "Backend": 210,
     "AI/ML": 152,
     "QA": 107,
@@ -283,32 +283,34 @@
     "Data": 58,
     "Fullstack": 56,
     "Security": 52,
-    "PM/BA": 45,
-    "Mobile": 43,
+    "PM/BA": 43,
+    "Mobile": 42,
     "Frontend": 22
   },
   "corpus_filter": {
     "n_before": 1699,
-    "n_after": 1019,
-    "n_dropped": 680,
+    "n_after": 1015,
+    "n_dropped": 684,
+    "enabled": true,
+    "drop_non_it_title": true,
     "min_it_skills": 3,
     "min_it_skills_if_it_family": 2,
     "drop_reasons": {
       "non_it_title": 267,
-      "too_few_it_skills": 413
+      "too_few_it_skills": 417
     },
     "dropped_role_family": {
-      "Other": 521,
-      "PM/BA": 77,
+      "Other": 522,
+      "PM/BA": 79,
       "Backend": 47,
       "QA": 16,
-      "Mobile": 8,
+      "Mobile": 9,
       "Security": 5,
       "AI/ML": 5,
       "Data": 1
     },
     "kept_role_family": {
-      "Other": 215,
+      "Other": 214,
       "Backend": 210,
       "AI/ML": 152,
       "QA": 107,
@@ -316,8 +318,8 @@
       "Data": 58,
       "Fullstack": 56,
       "Security": 52,
-      "PM/BA": 45,
-      "Mobile": 43,
+      "PM/BA": 43,
+      "Mobile": 42,
       "Frontend": 22
     }
   }

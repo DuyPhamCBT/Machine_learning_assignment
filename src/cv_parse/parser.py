@@ -5,6 +5,7 @@ from __future__ import annotations
 import io
 from pathlib import Path
 
+from .cv_skills import extract_cv_skills
 from .experience import parse_experience
 from .level import parse_level
 
@@ -45,9 +46,19 @@ def parse_cv(filename: str, data: bytes, extractor=None) -> dict:
 
         extractor = SkillExtractor()
     text = extract_text(filename, data)
-    skills = extractor.extract(text)
     exp = parse_experience(text)
     level = parse_level(text)
+    cv_cfg = {}
+    try:
+        from src.paths import load_config
+
+        cv_cfg = (load_config().get("cv_extract") or {})
+    except FileNotFoundError:
+        cv_cfg = {}
+    if cv_cfg.get("enabled"):
+        skills = extract_cv_skills(extractor, text, cv_cfg, level.get("level_ordinal"))
+    else:
+        skills = extractor.extract(text)
     return {
         "text": text[:8000],
         "skills": skills,

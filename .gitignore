@@ -13,4 +13,6 @@ data/raw/_debug*
 .vscode/
 *.egg-info/
 .pytest_cache/
+experiments/*/models/
+experiments/*/data/
 reports/

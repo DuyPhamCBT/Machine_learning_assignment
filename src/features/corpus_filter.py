@@ -46,8 +46,14 @@ def is_non_it_title(title: str | None) -> bool:
     return bool(_NON_IT_TITLE.search(title or ""))
 
 
-def keep_it_job(row, taxonomy, min_it_skills: int, min_it_skills_if_it_family: int) -> bool:
-    if is_non_it_title(row.get("title")):
+def keep_it_job(
+    row,
+    taxonomy,
+    min_it_skills: int,
+    min_it_skills_if_it_family: int,
+    drop_non_it_title: bool = True,
+) -> bool:
+    if drop_non_it_title and is_non_it_title(row.get("title")):
         return False
     n = count_it_skills(row.get("skills_norm"), taxonomy)
     family = row.get("role_family") or "Other"
@@ -58,20 +64,48 @@ def keep_it_job(row, taxonomy, min_it_skills: int, min_it_skills_if_it_family: i
 
 def filter_it_corpus(df: pd.DataFrame, taxonomy) -> tuple[pd.DataFrame, dict]:
     cfg = (load_config().get("corpus") or {})
+    enabled = bool(cfg.get("enabled", True))
+    drop_title = bool(cfg.get("drop_non_it_title", True))
     min_it = int(cfg.get("min_it_skills", 3))
     min_fam = int(cfg.get("min_it_skills_if_it_family", 2))
     before = int(len(df))
-    keep = df.apply(lambda row: keep_it_job(row, taxonomy, min_it, min_fam), axis=1)
+    families = (
+        df["role_family"].value_counts().to_dict()
+        if "role_family" in df.columns and not df.empty
+        else {}
+    )
+    if not enabled:
+        stats = {
+            "n_before": before,
+            "n_after": before,
+            "n_dropped": 0,
+            "enabled": False,
+            "drop_non_it_title": False,
+            "min_it_skills": min_it,
+            "min_it_skills_if_it_family": min_fam,
+            "drop_reasons": {"non_it_title": 0, "too_few_it_skills": 0},
+            "dropped_role_family": {},
+            "kept_role_family": families,
+        }
+        return df.copy(), stats
+
+    keep = df.apply(
+        lambda row: keep_it_job(row, taxonomy, min_it, min_fam, drop_title),
+        axis=1,
+    )
     dropped = df.loc[~keep]
     out = df.loc[keep].copy()
+    title_hit = df["title"].fillna("").map(is_non_it_title)
     reasons = {
-        "non_it_title": int(df["title"].fillna("").map(is_non_it_title).sum()),
-        "too_few_it_skills": int((~keep & ~df["title"].fillna("").map(is_non_it_title)).sum()),
+        "non_it_title": int(title_hit.sum()) if drop_title else 0,
+        "too_few_it_skills": int((~keep & ~title_hit).sum()) if drop_title else int((~keep).sum()),
     }
     stats = {
         "n_before": before,
         "n_after": int(len(out)),
         "n_dropped": before - int(len(out)),
+        "enabled": True,
+        "drop_non_it_title": drop_title,
         "min_it_skills": min_it,
         "min_it_skills_if_it_family": min_fam,
         "drop_reasons": reasons,
