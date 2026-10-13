@@ -8,14 +8,14 @@ Không dùng LLM embedding / GPU. Cấu hình tập trung ở `config.yaml`. Rep
 
 | | |
 |---|---|
-| JD thô → sạch → **IT dùng để train** | 1711 → 1699 → **1015** |
-| Nguồn (sau lọc) | ITviec 538 · TopCV 477 |
-| Vector | 686-d (skill 644 + text SVD 40 + năm/cấp 2) → PCA 50-d (~**49%** phương sai) |
+| JD thô → sạch → **IT dùng để train** | 2218 → 2196 → **1423** |
+| Nguồn (sau lọc) | ITviec 594 · VietnamWorks 521 · TopCV 308 |
+| Vector | 720-d (skill 678 + text SVD 40 + năm/cấp 2) → PCA 50-d (~**48%** phương sai) |
 | K-Means | **K = 13** (argmax silhouette 8…14) |
-| Silhouette / Davies–Bouldin | 0.13 / 2.37 |
+| Silhouette / Davies–Bouldin | 0.12 / 2.55 |
 | Precision@10 (`role_family`, 40 query) | **0.46** |
 
-Silhouette thấp hơn corpus cũ (0.24 trên 1699 JD) vì đã **bỏ cụm non-IT dễ tách** (design, sales, CNC, JD 0 skill). Cụm còn lại đọc được hơn (QA ~81% đúng family, AI/ML ~84%). Plot PCA 2D **không** đo chất lượng cụm — K-Means chạy trên 50 chiều.
+Silhouette thấp hơn corpus không lọc vì đã **bỏ cụm non-IT dễ tách** (design, sales, CNC, JD ít skill). Cụm còn lại đọc được hơn (QA ~73% đúng family, AI/ML ~89%). Plot PCA 2D **không** đo chất lượng cụm — K-Means chạy trên 50 chiều.
 
 ---
 
@@ -63,7 +63,7 @@ ITviec / TopCV
         │  Lọc corpus IT  (bỏ sales / design / CNC / ít skill)
         │  TF-IDF skill 80% + SVD text 10% + năm/cấp 10% → L2
         ▼
- models/job_vectors.npy                  ~686-d
+ models/job_vectors.npy                  ~720-d
         │
         ▼
  models/space.joblib                     (4) PCA(50) + L2  — không StandardScaler
@@ -116,12 +116,12 @@ Machine_learning_assignment/
 │   ├── evaluation/
 │   └── cv_parse/                    # PDF / DOCX (kèm bảng) / TXT; ưu tiên khối Skills
 ├── data/
-│   ├── raw/combined.jsonl           # ~1711 dòng
+│   ├── raw/combined.jsonl           # 2218 dòng (ITviec, TopCV, VietnamWorks)
 │   ├── dictionaries/skills.yaml
 │   ├── dictionaries/alias_policy.yaml  # siết alias rộng, gộp skill trùng
 │   ├── samples/cv_fresher_python.txt
-│   ├── interim/jobs_clean.pkl       # 1699 JD sạch
-│   └── processed/jobs.pkl           # 1015 JD IT + cụm — app đọc file này
+│   ├── interim/jobs_clean.pkl       # 2196 JD sạch
+│   └── processed/jobs.pkl           # 1423 JD IT + cụm — app đọc file này
 ├── models/                          # pipeline, space, kmeans, knn, vectors
 └── reports/                         # evaluation.json, PCA HTML so sánh
 ```
@@ -211,7 +211,7 @@ Cào xong **train lại** từ `preprocess.py`.
 
 Selenium headless, ITviec + TopCV. JSONL incremental theo URL. Không login, không vượt captcha.
 
-### (2) Preprocess — 1711 → 1699
+### (2) Preprocess — 2218 → 2196
 
 - Bỏ JD &lt; 80 ký tự; HTML; Unicode.
 - Tách mô tả / yêu cầu / nice-to-have / quyền lợi (quyền lợi **không** vào TF-IDF).
@@ -220,7 +220,7 @@ Selenium headless, ITviec + TopCV. JSONL incremental theo URL. Không login, kh�
 - **Cấp JD**: đọc **title trước** — `Trưởng nhóm` / Team lead → lead. Không dùng `alias in blob` (tránh `lead` ⊂ `leadership`).
 - `role_family`: rule trên title — **nhãn yếu**, không phải target train.
 
-### (3) Features + lọc corpus — 1699 → 1015
+### (3) Features + lọc corpus — 2196 → 1423
 
 `data/dictionaries/skills.yaml`: canonical + alias, alias dài trước, biên Unicode (`java` ≠ `javascript`). `alias_policy.yaml` siết alias rộng (`cache`, `solid`, `s3` ≠ AWS, GitHub ≠ git) và gộp skill trùng (redis_cache → redis, minio_s3 → minio, ingress_nginx → nginx). Family hiển thị: language / frontend / backend / mobile / data / ai_ml / devops / cloud / qa / security. Bỏ `soft` / `domain` / `industrial`. Blocklist alias ngắn (`ui`, `cv`, `json`, …). Photoshop/Figma **không** tính là skill IT khi lọc.
 
@@ -231,16 +231,16 @@ Giữ JD nếu:
 - Title không phải sales / thiết kế / CNC / …, **và**
 - ≥ 2 skill IT nếu `role_family` là Backend, QA, DevOps, …; **hoặc** ≥ 3 skill IT với các family khác.
 
-Lần train này: drop **684** (267 title + 417 ít skill).
+Lần train này: drop **773** (246 title + 527 ít skill).
 
 Mỗi JD còn lại một vector L2:
 
 | Khối | Chiều (lần train) | Trọng số |
 |---|---:|---:|
-| TF-IDF skill canonical | 644 | 0.80 |
+| TF-IDF skill canonical | 678 | 0.80 |
 | TF-IDF 1–2 gram phần yêu cầu + SVD | 40 | 0.10 |
 | `years_mid` (clip 0–12), `level_ordinal` (MinMax) | 2 | 0.10 |
-| **Tổng** | **686** | L2 lần cuối |
+| **Tổng** | **720** | L2 lần cuối |
 
 Query CV: bỏ `git` / `html` / `css` khỏi khối skill khi còn skill khác. Không có text CV thì zero khối SVD.
 
@@ -250,7 +250,7 @@ Query CV: bỏ `git` / `html` / `css` khỏi khối skill khi còn skill khác. 
 
 **Không** StandardScaler (z-score trên TF-IDF thưa làm PCA đuổi skill hiếm, JD IT bị nén một cụm).
 
-686-d → **PCA(50)** → L2 (~49% phương sai). Euclidean trên L2 ≈ cosine. **K = argmax silhouette** trên 8…14 → **13**.
+720-d → **PCA(50)** → L2 (~48% phương sai). Euclidean trên L2 ≈ cosine. **K = argmax silhouette** trên 8…14 → **13**.
 
 Tên cụm gán *sau* (mode `role_family` + top skill). Cụm **không lọc** KNN — chỉ hiện “nhóm nghề gần nhất”.
 
@@ -307,14 +307,14 @@ score = cosine
 
 | Metric | Giá trị |
 |---|---|
-| JD train | 1015 |
+| JD train | 1423 |
 | K | 13 |
-| PCA 50-d explained | 0.49 |
-| Silhouette | 0.13 |
-| Davies–Bouldin | 2.37 |
-| Size cụm | 38 … 129 |
+| PCA 50-d explained | 0.48 |
+| Silhouette | 0.12 |
+| Davies–Bouldin | 2.55 |
+| Size cụm | 54 … 190 |
 | Precision@10 | 0.46 (40 query) |
-| % `Other` | 21% |
+| % `Other` | 20% |
 
 So với corpus 1699 + StandardScaler: silhouette 0.24 (phình vì cụm design/rỗng skill), P@10 0.41, PCA 50-d 29%, size 72–369. File plot: `reports/pca_compare_filter.html`.
 
